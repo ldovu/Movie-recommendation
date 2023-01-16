@@ -1,3 +1,5 @@
+# in questo file se inserisci un film nella variabile film_preferito, ti restituisce 10 film 'simili'
+
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 import numpy as np
