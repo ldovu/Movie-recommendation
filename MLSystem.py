@@ -65,12 +65,12 @@ def ispresent(lista, film):
 dataset = pd.read_csv('movies_dataset.csv')
 dataset = dataset.iloc[:,1:]
 
-movie = pd.Series(df_titolo[(df_titolo.original_title.str.lower() == film_preferito.lower())].head(1).values[0], index = df_titolo.columns )
+movie = pd.Series(dataset[(dataset.original_title.str.lower() == film_preferito.lower())].head(1).values[0], index = dataset.columns)
 
-d1 = d1.iloc[:,1:]
+d1 = dataset.iloc[:,1:]
 
 # rimuovo film con durata maggiore
-d2 = d2[d2.runtime <= Tmax]
+d2 = d1[d1.runtime <= Tmax]
 
 dataset = dataset[dataset.runtime <= Tmax]
 
