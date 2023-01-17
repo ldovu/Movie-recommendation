@@ -5,15 +5,12 @@ import numpy as np
 from tqdm import tqdm
 import numpy as np
 
-class Movie_Recommendation():
-    def __init__(self, dataset):
-        self.dataset = dataset
-    def recommend(self, movies, amount=1):
+def recommendMovies(self, dataset, film_target, amount=1):
         distance = []
         # movie = i valori della riga del film
-        movie = self.dataset[(self.dataset.title.str.lower() == movies.lower())].head(1).values[0]
+        movie = dataset[(dataset.title.str.lower() == film_target.lower())].head(1).values[0]
         # rec = il dataset a cui viene tolta la riga del film indicato
-        rec = self.dataset[self.dataset.title.str.lower() != movies.lower()]
+        rec = dataset[dataset.title.str.lower() != film_target.lower()]
         for film in tqdm(rec.values):
             d = 0
             for col in range(len(rec.columns)):
@@ -88,6 +85,6 @@ class MovieRecommendationSystem():
         titoli = self.dataset.iloc[:,0].values
         d2["title"] = titoli
         
-        recommendations = Movie_Recommendation(d2)
-        output = recommendations.recommend(film_target, 10)
-        return output
+        recommendations = recommendMovies(d2,film_target,10)
+   
+        return recommendations
