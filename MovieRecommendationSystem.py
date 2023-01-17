@@ -5,7 +5,7 @@ import numpy as np
 from tqdm import tqdm
 import numpy as np
 
-def recommendMovies(self, dataset, film_target, amount=1):
+def recommendMovies(dataset, film_target, amount=1):
         distance = []
         # movie = i valori della riga del film
         movie = dataset[(dataset.title.str.lower() == film_target.lower())].head(1).values[0]
