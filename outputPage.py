@@ -8,5 +8,5 @@ if st.experimental_get_query_params():
     value = st.experimental_get_query_params()["value"][0]
 st.session_state.child = be.decode_string(value)
 
-
+st.title("Here we go")
 st.write("You are a" + st.sessione_state.child)
