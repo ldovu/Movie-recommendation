@@ -9,4 +9,5 @@ import inputPage
 #st.session_state.child = be.decode_string(value)
 
 st.title("Here we go")
-st.write("You are a" + st.sessione_state.child)
+st.write("You are a" )
+         #st.sessione_state.child
