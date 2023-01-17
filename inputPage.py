@@ -3,7 +3,8 @@ import streamlit as st
 st.title('Movie recommendation system')
 st.header("AGE")
 choiceAge =st.radio("Are you a child or an adult?", ["child","adult"], key="child",  index=0 )
-       
+
+#if adult then show mood selection
 def ifAdultShowMood(sessionAge):
     if sessionAge == "adult":
         st.header("MOOD")
@@ -15,7 +16,7 @@ ifAdultShowMood(st.session_state.child)
 st.header("SIMILARITY")
 choicePreference = st.text_input('Which movie is similar to the one you want to watch?')
 
-#if è per adulti allora no parte sotto
+#if limited time then select time in the slider
 st.header("TIME")
 choiceTime = st.radio("How much time do you have?", ["infinite","limited"], key="minutes")
    
