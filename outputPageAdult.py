@@ -17,7 +17,7 @@ for_kids = True
 if 0 <= time <=360:
     Tmax= int(time)
 else:
-    Tmax=np.Inf
+    Tmax=np.inf
 
 
 
