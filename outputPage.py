@@ -10,13 +10,13 @@ for i in x:
     if i in values:
         st.write("user is " +i)
 
-y= ["RIDERE","PIANGERE", "ADRENALINA", "AVVENTURA","AMORE", "PAURA", "FANTASTICARE", "SCIENCE FICTION", "CASUAL"]
-for i in y:
-    if i in values:
-        st.write("mood is" + i)
-    
-
-           
+def returnMood():
+    y= ["RIDERE","PIANGERE", "ADRENALINA", "AVVENTURA","AMORE", "PAURA", "FANTASTICARE", "SCIENCE FICTION", "CASUAL"]
+    for i in y:
+        if i in values:
+            mood = i
+            return st.write(mood)
+returnMood()
     
 
            
