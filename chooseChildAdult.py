@@ -2,7 +2,7 @@ import streamlit as st
 
 col1, col2, col3 = st.columns([1, 5,1])
 with col2:
-    with st.form:
+    with st.form(""):
         st.header("Let's start with your age")
         st.radio("Are you an adult o a child?", ["adult", "child"], key="qwerty")
         first = st.form_submit_button("Start")
