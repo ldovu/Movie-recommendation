@@ -32,4 +32,4 @@ res2 = values.split("fav=", 1)
 #film_target =be.decode_string(fav)
 #Max = be.decode_string(time)
 
-st.write( res2[1] )
+st.write( res2[1], res2[5] )
