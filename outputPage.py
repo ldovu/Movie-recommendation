@@ -9,4 +9,4 @@ values = st.experimental_get_query_params()["value"][0]
 #film_target =be.decode_string(fav)
 #Max = be.decode_string(time)
 
-st.write(values.split('mood')[1])
+st.write(values.partition('mood=')[1])
