@@ -29,7 +29,7 @@ with col2:
         chat_botton = st.write(f'''
                                      <div class="div">
                                          <center>
-                                             <a href="https://ldovu-movie-recommendation-inputpageadult-45z3ld.streamlit.app/?qwerty=%s">
+                                             <a href="https://ldovu-movie-recommendation-inputpagechild-2jx062.streamlit.app/?qwerty=%s">
                                                  <button> Move to the next question </button>
                                              </a>
                                          </center>
@@ -37,7 +37,7 @@ with col2:
 
                                     ''' % (st.session_state.qwerty), unsafe_allow_html=True)
         if chat_botton() :
-                nav_to("https://ldovu-movie-recommendation-inputpageadult-45z3ld.streamlit.app/")
+                nav_to("https://ldovu-movie-recommendation-inputpagechild-2jx062.streamlit.app/")
                 
                
 
