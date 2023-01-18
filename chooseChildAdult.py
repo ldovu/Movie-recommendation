@@ -13,7 +13,7 @@ with col2:
     st.radio("Are you an adult o a child?", ["adult", "child"], key="qwerty")
     
     if st.session_state.qwerty =="adult":
-        chat_botton = st.write(f'''
+        chat_botton1 = st.write(f'''
                                      <div class="div">
                                          <center>
                                              <a href="https://ldovu-movie-recommendation-inputpageadult-45z3ld.streamlit.app/?qwerty=%s">
@@ -23,10 +23,10 @@ with col2:
                                      <div class="btn">
 
                                     ''' % (st.session_state.qwerty), unsafe_allow_html=True)
-        if chat_botton() :
+        if chat_botton1() :
                 nav_to("https://ldovu-movie-recommendation-inputpageadult-45z3ld.streamlit.app/")
     elif st.session_state.qwerty =="child":
-        chat_botton = st.write(f'''
+        chat_botton2 = st.write(f'''
                                      <div class="div">
                                          <center>
                                              <a href="https://ldovu-movie-recommendation-inputpagechild-2jx062.streamlit.app/?qwerty=%s">
@@ -36,7 +36,7 @@ with col2:
                                      <div class="btn">
 
                                     ''' % (st.session_state.qwerty), unsafe_allow_html=True)
-        if chat_botton() :
+        if chat_botton2() :
                 nav_to("https://ldovu-movie-recommendation-inputpagechild-2jx062.streamlit.app/")
                 
                
