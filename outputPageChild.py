@@ -13,7 +13,7 @@ time =list1[2].replace("time=", "")
 mood = ""
 
 for_kids = False
-Tmax= int(time) or int(np.Inf)
+Tmax= int(time) 
 
 
 m = mrs.MovieRecommendationSystem()
