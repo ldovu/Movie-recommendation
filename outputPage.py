@@ -6,12 +6,17 @@ import pandas as pd
 values = st.experimental_get_query_params()["value"][0]
 
 x =["child", "adult"]
-if x in values:
-    st.write("user is " +x)
+for i in x:
+    if i in values:
+        st.write("user is " +i)
 
 y= ["RIDERE","PIANGERE", "ADRENALINA", "AVVENTURA","AMORE", "PAURA", "FANTASTICARE", "SCIENCE FICTION", "CASUAL"]
-if y in values:
-    st.write("mood is" + y)
+for i in y:
+    if i in values:
+        st.write("mood is" + i)
+    
+
+           
     
 
            
