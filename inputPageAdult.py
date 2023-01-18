@@ -33,7 +33,7 @@ if st.session_state.minutes == 'limited':
                                      </center>
                                  <div class="btn">
                                       
-                                ''' % ("adult",st.session_state.asdfgh ,st.session_state.zxcvbn, minute), unsafe_allow_html=True)
+                                ''' % (False,st.session_state.asdfgh ,st.session_state.zxcvbn, minute), unsafe_allow_html=True)
 
 else:
         #encoded_minute= be.encode_string(st.session_state.minutes)
@@ -46,7 +46,7 @@ else:
                                      </center>
                                  <div class="btn">
                                       
-                                ''' % ("adult", st.session_state.asdfgh ,st.session_state.zxcvbn, np.Inf ), unsafe_allow_html=True)
+                                ''' % (False, st.session_state.asdfgh ,st.session_state.zxcvbn, np.Inf ), unsafe_allow_html=True)
 
 
 
