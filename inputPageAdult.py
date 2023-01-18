@@ -27,7 +27,7 @@ if st.session_state.minutes == 'limited':
         chat_botton = st.write(f'''
                                  <div class="div">
                                      <center>
-                                         <a href="https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/?qwerty=adult/?asdfgh=%s/?zxcvbn=%s/?time=%s">
+                                         <a href="https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/?qwerty=%s/?asdfgh=%s/?zxcvbn=%s/?time=%s">
                                              <button> Go to prediction movies </button>
                                          </a>
                                      </center>
@@ -40,7 +40,7 @@ else:
         chat_botton = st.write(f'''
                                  <div class="div">
                                      <center>
-                                         <a href="https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/?qwerty=adult/?asdfgh=%s/?zxcvbn=%s/?time=%s">
+                                         <a href="https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/?qwerty=%s/?asdfgh=%s/?zxcvbn=%s/?time=%s">
                                              <button> Go to prediction movies </button>
                                          </a>
                                      </center>
