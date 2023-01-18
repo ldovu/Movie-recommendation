@@ -5,11 +5,14 @@ import pandas as pd
 #get query parameters
 values = st.experimental_get_query_params()["value"][0]
 
-x =["child", "adult"]
-for i in x:
-    if i in values:
-        st.write("user is " +i)
-
+def returnAge():
+    x =["child","adult"]
+    for i in x:
+        if x in values:
+            for_child=i
+            return st.write(for_child)
+returnAge()
+    
 def returnMood():
     y= ["RIDERE","PIANGERE", "ADRENALINA", "AVVENTURA","AMORE", "PAURA", "FANTASTICARE", "SCIENCE FICTION", "CASUAL"]
     for i in y:
@@ -17,7 +20,8 @@ def returnMood():
             mood = i
             return st.write(mood)
 returnMood()
-    
+
+        
 
            
 res2 = values.split("fav=", 1)
