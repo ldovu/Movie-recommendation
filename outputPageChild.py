@@ -1,18 +1,20 @@
 import streamlit as st
-import backend as be
 import pandas as pd
+import MovieRecommendationSystem as mrs
 
 #get query parameters
 values = st.experimental_get_query_params()["qwerty"][0]
 
 list1 = values.split('/?')
 
-for_child = list1[0].replace("qwerty=", "")
+child = list1[0].replace("qwerty=", "")
 fav = list1[1].replace("zxcvbn=", "").replace("%20", " ")
-time=list1[2].replace("time=", "")
+time =list1[2].replace("time=", "")
+
+for_kids = False
+Tmax= int(time)
 
 
-
-st.write(for_child)
-st.write(fav)
-st.write(time)
+m = mrs.MovieRecommendationSystem()
+recommended = m.recommend(for_kids, mood, film_target, Tmax)
+st.write(recommended )
