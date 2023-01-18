@@ -32,4 +32,4 @@ res3 = values.split("time=", 1)
 #film_target =be.decode_string(fav)
 #Max = be.decode_string(time)
 
-st.write( res2[1] + res3[1] )
+st.write( res2[1].replace("/?time=", "") + res3[1]  )
