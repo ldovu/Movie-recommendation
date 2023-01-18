@@ -14,7 +14,7 @@ st.radio('Which emotion you would like to try?', df, key="asdfgh")
 ##############  MOOD SELECTION  ##############
 #if user is a child then do not show the option mood, otherwise yes
 st.header("SIMILARITY")
-choicePreference = st.text_input('Which movie is similar to the one you want to watch?', key="zxcvbn")
+choicePreference = st.text_input('Which movie is similar to the one you want to watch? (_optional_)', key="zxcvbn")
 #encoded_movieTarget = be.encode_string(st.session_state.movieTarget)
 
 ##############  TIME SELECTION  ############## 
