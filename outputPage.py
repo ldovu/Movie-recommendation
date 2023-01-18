@@ -1,17 +1,21 @@
 import streamlit as st
 import backend as be
+import pandas as pd
 
 #get query parameters
 values = st.experimental_get_query_params()["value"][0]
 
-x ="child"
-y = "adult"
+x =["child", "adult"]
 if x in values:
-    st.write("user is a" +x)
+    st.write("user is " +x)
+
+y= ["RIDERE","PIANGERE", "ADRENALINA", "AVVENTURA","AMORE", "PAURA", "FANTASTICARE", "SCIENCE FICTION", "CASUAL"]
 if y in values:
-    st.write("user is a" +y)
-            
-res2 = values.split("mood=", 1)
+    st.write("mood is" + y)
+    
+
+           
+res2 = values.split("fav=", 1)
 #res3 = values.split("fav=", 1)
 #res4 = values.split("time=", 1)
 #for_child= be.decode_string(value)
@@ -19,4 +23,4 @@ res2 = values.split("mood=", 1)
 #film_target =be.decode_string(fav)
 #Max = be.decode_string(time)
 
-st.write("for_child" + res2[1] )
+st.write( res2[1] )
