@@ -23,7 +23,7 @@ choiceTime = st.radio("How much time do you have?", ["infinite","limited"], key=
    
 if st.session_state.minutes == 'limited':
         minute=st.slider('Select maximum minutes', 0, 360, 0)
-        st.write("you have maximum: " + minute + " minutes")
+        #st.write("you have maximum: " + minute + " minutes")
         chat_botton = st.write(f'''
                                  <div class="div">
                                      <center>
