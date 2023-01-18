@@ -15,3 +15,4 @@ Tmax=list1[3].replace("time=", "")
 
 m = mrs.MovieRecommendationSystem()
 recommended = m.recommend(for_kids, mood, film_target, Tmax)
+st.write(recommended )
