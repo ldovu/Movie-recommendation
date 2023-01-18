@@ -12,21 +12,33 @@ with col2:
     st.header("Let's start with your age")
     st.radio("Are you an adult o a child?", ["adult", "child"], key="qwerty")
     
-    chat_botton = st.write(f'''
-                                 <div class="div">
-                                     <center>
-                                         <a href="/?qwerty=%s">
-                                             <button> Move to the next question </button>
-                                         </a>
-                                     </center>
-                                 <div class="btn">
-                                      
-                                ''' % (st.session_state.qwerty), unsafe_allow_html=True)
+    if st.session_state.qwerty =="adult":
+        chat_botton = st.write(f'''
+                                     <div class="div">
+                                         <center>
+                                             <a href="https://ldovu-movie-recommendation-inputpageadult-45z3ld.streamlit.app/?qwerty=%s">
+                                                 <button> Move to the next question </button>
+                                             </a>
+                                         </center>
+                                     <div class="btn">
 
-    if chat_botton() :
-            if st.session_state.qwerty =="adult":
-                nav_to("link to the page of the adult with mood")
-            elif st.session_state.qwerty =="child":
-                nav_to("link of the page of the child without mood")
+                                    ''' % (st.session_state.qwerty), unsafe_allow_html=True)
+        if chat_botton() :
+                nav_to("https://ldovu-movie-recommendation-inputpageadult-45z3ld.streamlit.app/")
+    elif st.session_state.qwerty =="child":
+        chat_botton = st.write(f'''
+                                     <div class="div">
+                                         <center>
+                                             <a href="https://ldovu-movie-recommendation-inputpageadult-45z3ld.streamlit.app/?qwerty=%s">
+                                                 <button> Move to the next question </button>
+                                             </a>
+                                         </center>
+                                     <div class="btn">
+
+                                    ''' % (st.session_state.qwerty), unsafe_allow_html=True)
+        if chat_botton() :
+                nav_to("https://ldovu-movie-recommendation-inputpageadult-45z3ld.streamlit.app/")
+                
+               
 
 
