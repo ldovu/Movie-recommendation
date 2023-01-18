@@ -14,4 +14,6 @@ res4 = values.split("time=", 1)
 #film_target =be.decode_string(fav)
 #Max = be.decode_string(time)
 
-st.write("for_child" + res1[1] + " \n mood" + res2[1] + "\n sim to " + res3[1]+  "\n time"+res4[1]) 
+st.write("for_child" + res1[1] )
+         
+         #+ " \n mood" + res2[1] + "\n sim to " + res3[1]+  "\n time"+res4[1] 
