@@ -18,12 +18,14 @@ if st.session_state.child=="adult":
                                         "FANTASTICARE", "SCIENCE FICTION", "CASUAL"])
     
     st.radio('Which emotion you would like to try?', df, key="banana")
+    encoded_mood = be.encode_string(st.session_state.banana)
     
     ##############  MOOD SELECTION  ##############
     #if user is a child then do not show the option mood, otherwise yes
     st.header("SIMILARITY")
     choicePreference = st.text_input('Which movie is similar to the one you want to watch?', key="movieTarget")
-    
+    encoded_movieTarget = be.encode_string(st.session_state.movieTarget)
+
     ##############  TIME SELECTION  ############## 
     st.header("TIME")
     choiceTime = st.radio("How much time do you have?", ["infinite","limited"], key="minutes")
@@ -40,7 +42,7 @@ if st.session_state.child=="adult":
                                          </center>
                                      <div class="btn">
                                           
-                                    ''' % (st.session_state.child, st.session_state.banana, st.session_state.movieTarget,st.session_state.minutes), unsafe_allow_html=True)
+                                    ''' % (encoded_age,encoded_mood, encoded_movieTarget,minute), unsafe_allow_html=True)
 
     else:
             encoded_minute= be.encode_string(st.session_state.minutes)
@@ -53,7 +55,7 @@ if st.session_state.child=="adult":
                                          </center>
                                      <div class="btn">
                                           
-                                    ''' % (st.session_state.child, st.session_state.banana, st.session_state.movieTarget,st.session_state.minutes), unsafe_allow_html=True)
+                                    ''' % (encoded_age, encoded_mood,encoded_movieTarget,encoded_minute), unsafe_allow_html=True)
 
 else:
     ##############  MOVIE TARGET SELECTION  ##############
@@ -78,7 +80,7 @@ else:
                                          </center>
                                      <div class="btn">
                                           
-                                    ''' % (st.session_state.child, st.session_state.movieTarget,st.session_state.minutes), unsafe_allow_html=True)
+                                    ''' % (encoded_age, encoded_movieTarget,minute), unsafe_allow_html=True)
 
     else:
             encoded_minute= be.encode_string(st.session_state.minutes)
@@ -91,7 +93,7 @@ else:
                                          </center>
                                      <div class="btn">
                                           
-                                    ''' % (st.session_state.child, st.session_state.movieTarget,st.session_state.minutes), unsafe_allow_html=True)
+                                    ''' % (encoded_age,encoded_movieTarget,encoded_minute), unsafe_allow_html=True)
 
 
 
@@ -104,6 +106,7 @@ def nav_to(url):
     
 if chat_botton:
     nav_to("https://ldovu-movie-recommendation-outputpage-kldm4v.streamlit.app/")
+
 
 
 
