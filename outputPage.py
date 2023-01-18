@@ -8,7 +8,7 @@ values = st.experimental_get_query_params()["value"][0]
 def returnAge():
     x =["child","adult"]
     for i in x:
-        if x in values:
+        if i in values:
             for_child=i
             return st.write(for_child)
 returnAge()
