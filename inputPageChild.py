@@ -9,7 +9,7 @@ st.title('Movie recommendation system')
 
 ##############  MOVIE TARGET SELECTION  ##############
 st.header("SIMILARITY")
-choicePreference = st.text_input('Which movie is similar to the one you want to watch?', key="zxcvbn")
+choicePreference = st.text_input('Which movie is similar to the one you want to watch? (_optional_)', key="zxcvbn")
 #encoded_movieTarget = be.encode_string(st.session_state.movieTarget)
 
 ##############  TIME SELECTION  ##############
@@ -29,7 +29,7 @@ if st.session_state.minutes == 'limited':
                                      </center>
                                  <div class="btn">
                                       
-                                ''' % ("child",st.session_state.zxcvbn, minute), unsafe_allow_html=True)
+                                ''' % (True ,st.session_state.zxcvbn, minute), unsafe_allow_html=True)
 
 else:
         #encoded_minute= be.encode_string(st.session_state.minutes)
@@ -42,7 +42,7 @@ else:
                                      </center>
                                  <div class="btn">
                                       
-                                ''' % ("child",st.session_state.zxcvbn, np.Inf ), unsafe_allow_html=True)
+                                ''' % (True,st.session_state.zxcvbn, np.Inf ), unsafe_allow_html=True)
 
 
 
