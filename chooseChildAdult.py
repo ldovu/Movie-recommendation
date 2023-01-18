@@ -23,7 +23,7 @@ with col2:
                                      <div class="btn">
 
                                     ''' % (st.session_state.qwerty), unsafe_allow_html=True)
-        if chat_botton1() :
+        if chat_botton1 :
                 nav_to("https://ldovu-movie-recommendation-inputpageadult-45z3ld.streamlit.app/")
     elif st.session_state.qwerty =="child":
         chat_botton2 = st.write(f'''
@@ -36,7 +36,7 @@ with col2:
                                      <div class="btn">
 
                                     ''' % (st.session_state.qwerty), unsafe_allow_html=True)
-        if chat_botton2() :
+        if chat_botton2 :
                 nav_to("https://ldovu-movie-recommendation-inputpagechild-2jx062.streamlit.app/")
                 
                
