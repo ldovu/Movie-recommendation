@@ -5,6 +5,7 @@ import numpy as np
 from tqdm import tqdm
 import numpy as np
 
+# funzione che raccomanda 10 film simili al film target
 def recommendMovies(dataset, film_target, amount=1):
         distance = []
         # movie = i valori della riga del film
@@ -22,10 +23,22 @@ def recommendMovies(dataset, film_target, amount=1):
         columns = ['title']
         return rec[columns][:amount]
 
+# funziona che raccomanda i 10 film più famosi del mood inserito
+def MoodRecommendation(dataset, amount=1):
+    rec = dataset.sort_values('revenue',ascending=False)
+    columns = ['title']
+    return rec[columns][:amount]
+    
 # funzione che sceglie quali film tenere in base al mood    
 def selectMovies(df, mood):
     if (mood == 'RIDERE'):
-        return df[df.Comedy == 1]
+        df1 = df[df.Comedy == 1]
+        df1 = df1[df1.Animation != 1]
+        df1 = df1[df1.Fantasy != 1]
+        df1 = df1[df1.Action != 1]
+        df1 = df1[df1.Drama != 1]
+        df1 = df1[df1.ScienceFiction!= 1]
+        return df1
     if (mood == 'PIANGERE'):
         return df[df.Drama == 1]
     if (mood == 'AMORE'):
@@ -56,22 +69,28 @@ class MovieRecommendationSystem():
         self.dataset = pd.read_csv('movies_dataset.csv')
         self.dataset = self.dataset.iloc[:,1:]
     def recommend(self,for_kids,mood,film_target,Tmax ):
-        if (not(film_target == None)):
+        if (not(film_target == '')):
             movie = pd.Series(self.dataset[(self.dataset.original_title.str.lower() == film_target.lower())].head(1).values[0], index = self.dataset.columns )  
         d1 = self.dataset.iloc[:,1:]
+        # verifico for_kids
+        if (for_kids): # filtro for_kids
+            d1 = d1[d1.Animation == 1]
+            self.dataset = self.dataset[self.dataset.Animation == 1]
+        else:# filtro mood
+            d1 = selectMovies(d1,mood)
+            self.dataset = selectMovies(self.dataset,mood)
         # rimuovo film con durata maggiore di tmax
         d1 = d1[d1.runtime <= Tmax]
         self.dataset = self.dataset[self.dataset.runtime <= Tmax]
-        # rimuovo film in base a for_kids
-        if (for_kids):
-            d1 = d1[d1.Animation == 1]
-            self.dataset = self.dataset[self.dataset.Animation == 1]
-        # rimuovo film in base a emotion
-        if (not for_kids):
-            d1 = selectMovies(d1,mood)
-            self.dataset = selectMovies(self.dataset,mood)
-        # se non è presente riaggiungo il film preferito
-        if (not(film_target == None) and not ispresent(self.dataset.iloc[:,0],film_target)):
+        # se film_target non inserito consiglio in base al mood
+        if (film_target == ''):
+            titoli = self.dataset.iloc[:,0].values
+            d1["title"] = titoli
+            recommendations = MoodRecommendation(d1,10)
+            return recommendations
+        # se film_target inserito
+        # se non è presente dopo i tagli riaggiungo il film preferito
+        elif(not ispresent(self.dataset.iloc[:,0],film_target)):
             d1.loc[len(d1)] = movie[1:19]
             self.dataset.loc[len(self.dataset)] = movie
         # normalizzazione dei dati
