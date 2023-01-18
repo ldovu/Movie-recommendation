@@ -3,5 +3,5 @@ import streamlit as st
 
 
 #get query parameters
-st.experimental_get_query_params()
+st.write(st.experimental_get_query_params())
 
