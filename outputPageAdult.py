@@ -14,12 +14,8 @@ film_target = list1[2].replace("zxcvbn=", "").replace("%20", " ")
 time =list1[3].replace("time=", "")
 
 for_kids = True
-if 0 <= time <=360:
-    Tmax= int(time)
-else:
-    Tmax=np.inf
 
-
+Tmax= int(time)
 
 m = mrs.MovieRecommendationSystem()
 recommended = m.recommend(for_kids, mood, film_target, Tmax)
