@@ -1,10 +1,7 @@
 import streamlit as st
 import backend as be
 
-values =[] 
-query = ["value","mood", "fav", "time"]
-for i in query:
-    values = st.experimental_get_query_params()[i][0]
+values = st.experimental_get_query_params()["value"][0]
     
 
 #for_child= be.decode_string(value)
