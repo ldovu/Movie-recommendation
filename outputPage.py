@@ -1,7 +1,5 @@
 import streamlit as st
 import backend as be
-import inputPage
-import MovieRecommendationSystem as mrs 
 
 
 #get query parameters
