@@ -7,6 +7,13 @@ import DatasetInspection as di
 st.title('Movie recommendation system')
 
 
+############################# REDIRECT TO PAGE 2 #####################
+def nav_to(url):
+    nav_script = """
+                    <meta http-equiv="refresh" content="0; url='%s'">
+                 """ % (url)
+    st.write(nav_script, unsafe_allow_html=True)
+    
 
 ##############  MOVIE TARGET SELECTION  ##############
 st.header("SIMILARITY")
@@ -41,6 +48,9 @@ def timeSelection(timeOption, movie):
                                  <div class="btn">
                                       
                                 ''' % (True ,movie , minute), unsafe_allow_html=True)
+        if chat_botton:
+            nav_to("https://ldovu-movie-recommendation-outputpagechild-qi8pl4.streamlit.app/")
+    
     else:
         
         chat_botton = st.write(f'''
@@ -53,18 +63,10 @@ def timeSelection(timeOption, movie):
                                  <div class="btn">
                                       
                                 ''' % (True,movie , 600 ), unsafe_allow_html=True)
+        if chat_botton:
+            nav_to("https://ldovu-movie-recommendation-outputpagechild-qi8pl4.streamlit.app/")
+            
+            
 
 timeSelection(st.session_state.minutes, st.session_state.zxcvbn)
-
-
-
-############################# REDIRECT TO PAGE 2 #####################
-def nav_to(url):
-    nav_script = """
-                    <meta http-equiv="refresh" content="0; url='%s'">
-                 """ % (url)
-    st.write(nav_script, unsafe_allow_html=True)
-    
-if chat_botton:
-    nav_to("https://ldovu-movie-recommendation-outputpagechild-qi8pl4.streamlit.app/")
 
