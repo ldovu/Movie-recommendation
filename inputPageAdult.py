@@ -42,7 +42,7 @@ def checkInputUserBoolean(title):
     if di.checkTitolo(title) or title=="":
         return True
     else: 
-        st.error("Incorrect title movie")
+        #st.error("Incorrect title movie")
         return False 
         
 ############################  TIME SELECTION  ############################ 
@@ -65,8 +65,10 @@ def timeSelection(timeOption, mood, movie):
                                      <div class="btn">
                                           
                                     ''' % (False,mood , movie, minute), unsafe_allow_html=True)
-            if di.checkTitotlo(movie)==False:
-                    chat_botton.disabled=True
+            if checkInputUserBoolean(movie)==True:
+                    chat_botton.disabled=False
+            else: 
+                chat_botton.disabled=True
             if chat_botton :
                     nav_to("https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/")
            
