@@ -9,6 +9,7 @@ dataset_movies = pd.read_csv('movies_dataset_overview.csv')
 
 ###########################################################
 # raccomanda i film simili al film_target
+
 def recommendMovies(dataset, film_target, amount=1):
         distance = []
         # movie = i valori della riga del film
@@ -28,6 +29,7 @@ def recommendMovies(dataset, film_target, amount=1):
 
 ###########################################################
 # filtri per la funzione MoodRecommendation()
+
 def onlyMoodMovies(df,mood):
         if (mood == 'laugh'):
                 df1 = df[df.Comedy == 1]
