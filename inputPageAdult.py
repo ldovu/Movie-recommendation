@@ -59,14 +59,15 @@ def timeSelection(timeOption, mood, movie):
                                      <div class="div">
                                          <center>
                                              <a href="https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/?qwerty=%s/?asdfgh=%s/?zxcvbn=%s/?time=%s">
-                                                 <button> Go to prediction movies </button>
+                                                 <button disabled="disabled"> Go to prediction movies </button>
                                              </a>
                                          </center>
                                      <div class="btn">
                                           
                                     ''' % (False,mood , movie, minute), unsafe_allow_html=True)
-            if checkInputUserBoolean(movie):
-                if chat_botton :
+            if di.checkTitotlo(movie)==False:
+                    chat_botton.disabled=True
+            if chat_botton :
                     nav_to("https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/")
            
     
@@ -82,8 +83,7 @@ def timeSelection(timeOption, mood, movie):
                                      <div class="btn">
                                           
                                     ''' % (False, mood , movie, 600 ), unsafe_allow_html=True)
-            if  checkInputUserBoolean(movie):
-                if chat_botton :
+            if chat_botton :
                     nav_to("https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/")
 
 
