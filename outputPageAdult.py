@@ -18,6 +18,7 @@ Tmax = int(time)
 
 m = mrs.MovieRecommendationSystem()
 recommended = m.recommend(for_kids, mood, film_target, Tmax)
-st.write(recommended )
-st.write(type(recommended) )
+str = recommended.to_string()
+st.write(str )
+
 
