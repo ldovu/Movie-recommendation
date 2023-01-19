@@ -1,9 +1,11 @@
-
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 import numpy as np
 from tqdm import tqdm
 import numpy as np
+from Levenshtein import distance
+
+dataset_movies = pd.read_csv('movies_dataset_overview.csv')
 
 # funzione che raccomanda 10 film simili al film target
 def recommendMovies(dataset, film_target, amount=1):
@@ -64,10 +66,21 @@ def ispresent(lista, film):
             return True
     return False
 
+
+def forseCercavi(film):
+    lista = []
+    for i in range(len(dataset_movies['original_title'])):
+        if (film.lower() in str(dataset_movies['original_title'][i].lower())):
+            lista.append(dataset_movies['original_title'][i])
+        elif (distance(film.lower(),dataset_movies['original_title'][i].lower()) <= 2):
+            lista.append(dataset_movies['original_title'][i])
+    return lista
+
+
 class MovieRecommendationSystem():
     def __init__(self):
-        self.dataset = pd.read_csv('movies_dataset.csv')
-        self.dataset = self.dataset.iloc[:,1:]
+        self.dataset = dataset_movies
+        self.dataset = self.dataset.iloc[:,1:-1]
     def recommend(self,for_kids,mood,film_target,Tmax ):
         if (not(film_target == '')):
             movie = pd.Series(self.dataset[(self.dataset.original_title.str.lower() == film_target.lower())].head(1).values[0], index = self.dataset.columns )  
