@@ -16,7 +16,7 @@ def nav_to(url):
 
 ############################  MOOD SELECTION  ############################
 st.header("MOOD")
-df= pd.DataFrame(["RIDERE","PIANGERE", "ADRENALINA", "AVVENTURA","AMORE", "PAURA", "FANTASTICARE", "SCIENCE FICTION", "CASUAL"])
+df= pd.DataFrame(["laugh","cry", "adrenaline", "adventure","love", "fear", "fantasy", "science fiction", "casual"])
 
 st.radio('Which emotion you would like to try?', df, key="asdfgh")
 
