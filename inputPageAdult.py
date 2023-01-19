@@ -52,7 +52,7 @@ choiceTime = st.radio("How much time do you have?", ["infinite","limited"], key=
 def timeSelection(timeOption, mood, movie):
     if timeOption == 'limited':
             minute=st.slider('Select maximum minutes', 0, 360, 0)
-            if di.checkTitolo(movie)==False:
+            if di.checkTitolo(movie)==False or movie!="":
                 chat_botton = st.write(f'''
                                      <div class="div">
                                          <center>
@@ -77,7 +77,7 @@ def timeSelection(timeOption, mood, movie):
            
     
     else:
-            if di.checkTitolo(movie)==False:
+            if di.checkTitolo(movie)==False or movie!="":
                 chat_botton = st.write(f'''
                                      <div class="div">
                                          <center>
