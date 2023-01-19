@@ -16,17 +16,15 @@ time =list1[3].replace("time=", "")
 
 for_kids = False
 Tmax = int(time)
-
-if di.checkTitolo(film_target) or film_target==" ":
-
-    m = mrs.MovieRecommendationSystem()
-    recommended = m.recommend(for_kids, mood, film_target, Tmax)
-    df = recommended.reset_index(drop=True)
-        
+    
+if di.checkTitolo(film_target)== False:
+    st.error("You insert a wrong movie title, please go back and provide a new one", icon="🚨")
 else:
-    st.error("You've inserted a wrong movie title, please go back and provide a new correct one", icon="🚨")
-
-
+    m = mrs.MovieRecommendationSystem()
+    recommended = m.recommend(for_kids, mood, film_target , Tmax )
+    df = recommended.reset_index(drop=True)
+    
+    
 
 #prova link per i link delle trame dei film 
 #url = "https://ldovu-movie-recommendation-page0-awd4vf.streamlit.app/"
