@@ -24,12 +24,6 @@ st.radio('Which emotion would you like to try?', df, key="asdfgh")
 ############################  MOVIE_TARGET SELECTION  ############################
 st.header("SIMILARITY")
 choicePreference = st.text_input('Which movie is similar to the one you want to watch?', key="zxcvbn")
-if st.session_state.zxcvbn==" " and mrs.checkTitolo(st.session_state.zxcvbn):
-        st.write("You would like to see a movie similar to ",  st.session_state.zxcvbn )
-else:
-    st.write("You might looked for: ")
-    mrs.forseCercavi(st.session_state.zxcvbn)
-
 
 
 ############################  TIME SELECTION  ############################ 
@@ -50,8 +44,11 @@ def timeSelection(timeOption, mood, movie):
                                      <div class="btn">
                                           
                                     ''' % (False,mood , movie, minute), unsafe_allow_html=True)
-            if chat_botton:
+            if chat_botton and mrs.checkTitolo(movie)==True:
                 nav_to("https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/")
+            elif mrs.checkTitolo(movie)==False :
+                st.write("You might looked for: ")
+                mrs.forseCercavi(movie)
     
     else:
             #encoded_minute= be.encode_string(st.session_state.minutes)
