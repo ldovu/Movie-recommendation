@@ -26,7 +26,7 @@ st.header("SIMILARITY")
 choicePreference = st.text_input('Which movie is similar to the one you want to watch? (_optional_)', key="zxcvbn")
 
  
-def check(title):
+def checkInputUser(title):
     if di.checkTitolo(title) or title=="":
         st.write("You  would like to see a movie similar to ", title)
     else:
@@ -36,7 +36,7 @@ def check(title):
         st.write("You might looked for: ", mystring)
 
 
-check(st.session_state.zxcvbn)
+checkInputUser(st.session_state.zxcvbn)
 
         
         
