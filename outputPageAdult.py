@@ -25,7 +25,7 @@ st.write(df )
 st.write(for_kids)
 st.write(mood)
 st.write(film_target)
-st.write(Tmax)
+st.write(time)
 
 #prova link per i link delle trame dei film 
 #url = "https://ldovu-movie-recommendation-page0-awd4vf.streamlit.app/"
