@@ -2,6 +2,7 @@ import streamlit as st
 import backend as be
 import pandas as pd
 import numpy as np
+import MovieRecommendationSystem as mrs
 
 st.title('Movie recommendation system')
 
@@ -15,11 +16,11 @@ st.radio('Which emotion you would like to try?', df, key="asdfgh")
 #if user is a child then do not show the option mood, otherwise yes
 st.header("SIMILARITY")
 choicePreference = st.text_input('Which movie is similar to the one you want to watch? (_optional_)', key="zxcvbn")
-if checkTitolo(st.session_state.zxcvbn):
+if mrs.checkTitolo(st.session_state.zxcvbn):
     st.write("You would like to see a movie similar to ",  st.session_state.zxcvbn )
 else:
     st.warning('You might looked for: ', icon="⚠️")
-    forseCercavi(st.session.zxcvbn)
+    mrs.forseCercavi(st.session.zxcvbn)
 
 ##############  TIME SELECTION  ############## 
 st.header("TIME")
