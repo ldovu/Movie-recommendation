@@ -22,4 +22,7 @@ df = recommended.reset_index(drop=True)
 str = df.to_string()
 st.write(str )
 
+url = "https://ldovu-movie-recommendation-page0-awd4vf.streamlit.app/"
+st.write("check out this [link](%s)" % url)
+
 
