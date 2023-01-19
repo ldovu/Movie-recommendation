@@ -77,7 +77,7 @@ def timeSelection(timeOption, mood, movie):
            
     
     else:
-        if di.checkTitolo(movie)==False :
+        if checkInputUserBoolean(movie)==False :
                 chat_botton = st.write(f'''
                                      <div class="div">
                                          <center>
