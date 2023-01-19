@@ -12,8 +12,8 @@ film_target = list1[1].replace("zxcvbn=", "").replace("%20", " ")
 time =list1[2].replace("time=", "")
 mood = ""
 
-for_kids = False
-Tmax= int(time) 
+for_kids = True
+
 
 
 m = mrs.MovieRecommendationSystem()
