@@ -17,7 +17,7 @@ time =list1[3].replace("time=", "")
 for_kids = False
 Tmax = int(time)
     
-if di.checkTitolo(film_target)== False:
+if di.checkTitolo(film_target)== False or film_target!=" " :
     st.error("You insert a wrong movie title, please go back and provide a new one", icon="🚨")
 else:
     m = mrs.MovieRecommendationSystem()
