@@ -14,16 +14,18 @@ mood = list1[1].replace("asdfgh=", "")
 film_target = list1[2].replace("zxcvbn=", "").replace("%20", " ")
 time =list1[3].replace("time=", "")
 
-if di.checkTitolo(film_target) or film_target=="":
-    for_kids = False
-    Tmax = int(time)
+for_kids = False
+Tmax = int(time)
 
+
+if di.checkTitolo(film_target)== False:
+    st.error("You insert a wrong movie title, please go back and provide a new correct one", icon="🚨")
+    
+else:
     m = mrs.MovieRecommendationSystem()
     recommended = m.recommend(for_kids, mood, film_target, Tmax)
     df = recommended.reset_index(drop=True)
         
-else:
-    st.warning("You insert a wrong movie title, please go back and provide a new correct one", icon="⚠️")
 
 
 #prova link per i link delle trame dei film 
