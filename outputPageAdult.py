@@ -18,8 +18,6 @@ for_kids = False
 Tmax = int(time)
 
 if di.checkTitolo(film_target) or film_target=="":
-    for_kids = False
-    Tmax = int(time)
 
     m = mrs.MovieRecommendationSystem()
     recommended = m.recommend(for_kids, mood, film_target, Tmax)
