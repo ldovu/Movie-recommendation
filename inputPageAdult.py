@@ -25,15 +25,21 @@ st.radio('Which emotion would you like to try?', df, key="asdfgh")
 st.header("SIMILARITY")
 choicePreference = st.text_input('Which movie is similar to the one you want to watch?', key="zxcvbn")
 
+   
+if di.checkTitolo(st.session_state.zxcvbn) or st.session_state.zxcvbn=="":
+        st.write("You  would like to see a movie similar to ", st.session_state.zxcvbn)
+else:
+    mystring = " "
+        for x in mrs.forseCercavi(st.session_state.zxcvbn): 
+            mystring+= ', ' + x
+            st.write("You might looked for: ", mystring)
 
+        
+        
 ############################  TIME SELECTION  ############################ 
 st.header("TIME")
 choiceTime = st.radio("How much time do you have?", ["infinite","limited"], key="minutes")
     
-   
-if di.checkTitolo(st.session_state.zxcvbn) or st.session_state.zxcvbn=="":
-        st.write("You  would like to see a movie similar to ", st.session_state.zxcvbn)
-
 
 
 def timeSelection(timeOption, mood, movie):
