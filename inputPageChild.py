@@ -42,7 +42,7 @@ else:
                                      </center>
                                  <div class="btn">
                                       
-                                ''' % (True,st.session_state.zxcvbn, np.Inf ), unsafe_allow_html=True)
+                                ''' % (True,st.session_state.zxcvbn, 600 ), unsafe_allow_html=True)
 
 
 
