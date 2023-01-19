@@ -32,7 +32,7 @@ else:
     mystring = " "
     for x in di.forseCercavi(st.session_state.zxcvbn):
         mystring+= ' ' + x
-    st.write("You might looked for: ", **_mystring_**)
+    st.write("You might looked for: ", mystring)
 
         
         
