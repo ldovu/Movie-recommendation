@@ -2,7 +2,7 @@ import streamlit as st
 import backend as be
 import pandas as pd
 import numpy as np
-import MovieRecommendationSystem as mrs
+import DatasetInspection as di
 
 st.title('Movie recommendation system')
 
@@ -31,7 +31,13 @@ st.header("TIME")
 choiceTime = st.radio("How much time do you have?", ["infinite","limited"], key="minutes")
     
    
+def check(title):
+    if di.checkTitolo(title) or title==" ":
+        st.write("You  would like to see a movie similar to ", title)
+
+check(st.session_state.zxcvbn)      
    
+
 
 
 def timeSelection(timeOption, mood, movie):
