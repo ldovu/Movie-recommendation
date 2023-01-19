@@ -31,12 +31,8 @@ st.header("TIME")
 choiceTime = st.radio("How much time do you have?", ["infinite","limited"], key="minutes")
     
    
-def check(title):
-    if di.checkTitolo(title):
-        st.write("You  would like to see a movie similar to ", title)
-
-check(st.session_state.zxcvbn)      
-   
+if di.checkTitolo(st.session_state.zxcvbn):
+        st.write("You  would like to see a movie similar to ", st.session_state.zxcvbn)
 
 
 
