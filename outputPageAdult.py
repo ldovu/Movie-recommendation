@@ -19,8 +19,8 @@ Tmax = int(time)
 m = mrs.MovieRecommendationSystem()
 recommended = m.recommend(for_kids, mood, film_target, Tmax)
 df = recommended.reset_index(drop=True)
-str = df.to_string()
-st.write(str )
+
+st.write(df )
 
 url = "https://ldovu-movie-recommendation-page0-awd4vf.streamlit.app/"
 st.write("check out this [link](%s)" % url)
