@@ -87,9 +87,9 @@ def timeSelection(timeOption, mood, movie):
                                           
                                     ''' % (False,mood , movie, minute), unsafe_allow_html=True)
             if di.checkTitolo(movie)==False:
-                checkout-button.disabled=True
+                chat_button.disabled=True
             else:
-                checkout-button.disabled=False
+                chat_button.disabled=False
             if chat_botton :
                     nav_to("https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/")
            
