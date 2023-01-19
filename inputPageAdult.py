@@ -30,7 +30,7 @@ if di.checkTitolo(st.session_state.zxcvbn) or st.session_state.zxcvbn=="":
         st.write("You  would like to see a movie similar to ", st.session_state.zxcvbn)
 else:
     
-    mystring = ",".join(di.forseCercavi(st.session_state.zxcvbn))
+    mystring = ", ".join(di.forseCercavi(st.session_state.zxcvbn))
       
     st.write("You might looked for: ", mystring)
 
