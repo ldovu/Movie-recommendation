@@ -25,14 +25,18 @@ st.radio('Which emotion would you like to try?', df, key="asdfgh")
 st.header("SIMILARITY")
 choicePreference = st.text_input('Which movie is similar to the one you want to watch? (_optional_)', key="zxcvbn")
 
-   
-if di.checkTitolo(st.session_state.zxcvbn) or st.session_state.zxcvbn=="":
-        st.write("You  would like to see a movie similar to ", st.session_state.zxcvbn)
-else:
-    
-    mystring = ", ".join(di.forseCercavi(st.session_state.zxcvbn))
-      
-    st.write("You might looked for: ", mystring)
+ 
+def check(title):
+    if di.checkTitolo(title) or title=="":
+        st.write("You  would like to see a movie similar to ", title)
+    else:
+        
+        mystring = ", ".join(di.forseCercavi(title))
+          
+        st.write("You might looked for: ", mystring)
+
+
+check(st.session_state.zxcvbn)
 
         
         
