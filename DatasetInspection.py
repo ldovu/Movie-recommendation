@@ -22,7 +22,7 @@ def forseCercavi(film):
                         lista.append(dataset_movies['original_title'][i])
                 elif (distance(film.lower(),dataset_movies['original_title'][i].lower()) <= 2):
                         lista.append(dataset_movies['original_title'][i])
-        return lista
+        return lista[:3]
     
 ###########################################################
 
