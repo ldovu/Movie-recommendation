@@ -146,7 +146,7 @@ class MovieRecommendationSystem():
                         return recommendations
                 # se film_target inserito
                 # se non è presente dopo i tagli riaggiungo il film preferito
-                elif(not ispresent(self.dataset.iloc[:,0],film_target)):
+                elif(not ispresent(self.dataset['original_title'],film_target)):
                         d1.loc[len(d1)] = movie[1:19]
                         self.dataset.loc[len(self.dataset)] = movie
                 # normalizzazione dei dati
@@ -157,7 +157,7 @@ class MovieRecommendationSystem():
                 d2 = pd.DataFrame(d1_std)
                 d2.columns = d1.columns
                 # aggiungo i titoli dei film
-                titoli = self.dataset.iloc[:,0].values
+                titoli = self.dataset['original_title'].values
                 d2["title"] = titoli
         
                 recommendations = recommendMovies(d2,film_target,10)
