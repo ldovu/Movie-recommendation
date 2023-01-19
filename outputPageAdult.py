@@ -19,7 +19,9 @@ Tmax = int(time)
 
 m = mrs.MovieRecommendationSystem()
 recommended = m.recommend(for_kids, mood, film_target , Tmax )
-df = recommended.reset_index(drop=True)
+st.write(recommended )
+
+#df = recommended.reset_index(drop=True)
 
 
 #prova link per i link delle trame dei film 
