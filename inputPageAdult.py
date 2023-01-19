@@ -52,20 +52,28 @@ choiceTime = st.radio("How much time do you have?", ["infinite","limited"], key=
 def timeSelection(timeOption, mood, movie):
     if timeOption == 'limited':
             minute=st.slider('Select maximum minutes', 0, 360, 0)
-            #st.write("you have maximum: " + minute + " minutes")
-            chat_botton = st.write(f'''
+            if di.checkTitolo(movie)==False:
+                chat_botton = st.write(f'''
+                                     <div class="div">
+                                         <center>
+                                                 <button  disabled="disabled"> Go to prediction movies </button>
+                                         </center>
+                                     <div class="btn">
+                                          
+                                    ''', unsafe_allow_html=True)
+            else: 
+                chat_botton = st.write(f'''
                                      <div class="div">
                                          <center>
                                              <a href="https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/?qwerty=%s/?asdfgh=%s/?zxcvbn=%s/?time=%s">
-                                                 <button disabled="disabled"> Go to prediction movies </button>
+                                                 <button> Go to prediction movies </button>
                                              </a>
                                          </center>
                                      <div class="btn">
                                           
                                     ''' % (False,mood , movie, minute), unsafe_allow_html=True)
-           
             if chat_botton :
-                    nav_to("https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/")
+                nav_to("https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/")
            
     
     else:
