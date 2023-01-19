@@ -8,7 +8,7 @@ dataset_movies = pd.read_csv('movies_dataset_overview.csv')
 
 
 ###########################################################
-
+# raccomanda i film simili al film_target
 def recommendMovies(dataset, film_target, amount=1):
         distance = []
         # movie = i valori della riga del film
@@ -27,7 +27,7 @@ def recommendMovies(dataset, film_target, amount=1):
         return rec[columns][:amount]
 
 ###########################################################
-
+# filtri per la funzione MoodRecommendation()
 def onlyMoodMovies(df,mood):
         if (mood == 'laugh'):
                 df1 = df[df.Comedy == 1]
@@ -73,7 +73,8 @@ def onlyMoodMovies(df,mood):
         return df
 
 ###########################################################
-        
+# raccomanda i film in base al mood
+
 def MoodRecommendation(dataset, mood, amount=1):
         rec = onlyMoodMovies(dataset,mood)
         rec = rec.sort_values('revenue',ascending=False)
@@ -81,8 +82,8 @@ def MoodRecommendation(dataset, mood, amount=1):
         return rec[columns][:amount]
     
 ###########################################################    
+# filtra il dataset in base al mood   
 
-# funzione che sceglie quali film tenere in base al mood    
 def selectMovies(df, mood):
         if (mood == 'laugh'):
                 df1 = df[df.Comedy == 1]
@@ -107,8 +108,8 @@ def selectMovies(df, mood):
         return df
 
 ###########################################################
-
 # funzione per vedere se il film è presente nel dataset anche dopo i tagli
+
 def ispresent(lista, film):
         for x in lista:
                 if (x.lower() == film.lower()):
