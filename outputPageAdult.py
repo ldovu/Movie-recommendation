@@ -22,9 +22,13 @@ df = recommended.reset_index(drop=True)
 
 st.write(df )
 
+st.write(for_kids)
+st.write(mood)
+st.write(film_target)
+st.write(Tmax)
 
 #prova link per i link delle trame dei film 
-url = "https://ldovu-movie-recommendation-page0-awd4vf.streamlit.app/"
-st.write("check out this [link](%s)" % url)
+#url = "https://ldovu-movie-recommendation-page0-awd4vf.streamlit.app/"
+#st.write("check out this [link](%s)" % url)
 
 
