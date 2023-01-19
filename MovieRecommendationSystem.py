@@ -29,7 +29,7 @@ def recommendMovies(dataset, film_target, amount=1):
 ###########################################################
 
 def onlyMoodMovies(df,mood):
-        if (mood == 'RIDERE'):
+        if (mood == 'laugh'):
                 df1 = df[df.Comedy == 1]
                 df1 = df1[df1.Animation != 1]
                 df1 = df1[df1.Fantasy != 1]
@@ -37,7 +37,7 @@ def onlyMoodMovies(df,mood):
                 df1 = df1[df1.Drama != 1]
                 df1 = df1[df1.ScienceFiction!= 1]
                 return df1
-        if (mood == 'PIANGERE'):
+        if (mood == 'cry'):
                 df1 = df[df.Drama == 1]
                 df1 = df1[df1.Animation != 1]
                 df1 = df1[df1.Fantasy != 1]
@@ -45,30 +45,30 @@ def onlyMoodMovies(df,mood):
                 df1 = df1[df1.ScienceFiction!= 1]
                 df1 = df1[df1.Horror != 1]
                 return df1
-        if (mood == 'AMORE'):
+        if (mood == 'love'):
                 df1 = df[df.Romance == 1]
                 df1 = df1[df1.Animation != 1]
                 df1 = df1[df1.Fantasy != 1]
                 df1 = df1[df1.ScienceFiction!= 1]
                 return df1
-        if (mood == 'ADRENALINA'):
+        if (mood == 'adrenaline'):
                 return df[df.Thriller == 1]
-        if (mood == 'PAURA'):
+        if (mood == 'fear'):
                 return df[df.Horror == 1]
-        if (mood == 'FANTASTICARE'):
+        if (mood == 'fantasy'):
                 return df[df.Fantasy == 1]
-        if (mood == 'SCIENCE FICTION'):
+        if (mood == 'science fiction'):
                 df1 = df[df.ScienceFiction == 1]
                 df1 = df1[df1.Fantasy != 1]
                 df1 = df1[df1.Action != 1]
                 return df1
-        if (mood == 'AVVENTURA'):
+        if (mood == 'adventure'):
                 df1 = df[df.Adventure == 1]
                 df1 = df1[df1.Animation != 1]
                 df1 = df1[df1.Fantasy != 1]
                 df1 = df1[df1.ScienceFiction!= 1]
                 return df1
-        if (mood == 'CASUAL'):
+        if (mood == 'casual'):
                 return df
         return df
 
@@ -84,25 +84,25 @@ def MoodRecommendation(dataset, mood, amount=1):
 
 # funzione che sceglie quali film tenere in base al mood    
 def selectMovies(df, mood):
-        if (mood == 'RIDERE'):
+        if (mood == 'laugh'):
                 df1 = df[df.Comedy == 1]
                 df1 = df1[df1.Drama != 1]
                 return df1
-        if (mood == 'PIANGERE'):
+        if (mood == 'cry'):
                 return df[df.Drama == 1]
-        if (mood == 'AMORE'):
+        if (mood == 'love'):
                 return df[df.Romance == 1]
-        if (mood == 'ADRENALINA'):
+        if (mood == 'adrenaline'):
                 return df[df.Thriller == 1]
-        if (mood == 'PAURA'):
+        if (mood == 'fear'):
                 return df[df.Horror == 1]
-        if (mood == 'FANTASTICARE'):
+        if (mood == 'fantasy'):
                 return df[df.Fantasy == 1]
-        if (mood == 'SCIENCE FICTION'):
+        if (mood == 'science fiction'):
                 return df[df.ScienceFiction == 1]
-        if (mood == 'AVVENTURA'):
+        if (mood == 'adventure'):
                 return df[df.Adventure == 1]
-        if (mood == 'CASUAL'):
+        if (mood == 'casual'):
                 return df
         return df
 
