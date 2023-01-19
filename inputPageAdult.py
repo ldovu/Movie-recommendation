@@ -65,8 +65,9 @@ def timeSelection(timeOption, mood, movie):
                                      <div class="btn">
                                           
                                     ''' % (False,mood , movie, minute), unsafe_allow_html=True)
-            if chat_botton and checkInputUserBoolean(movie):
-                nav_to("https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/")
+            if checkInputUserBoolean(movie):
+                if chat_botton :
+                    nav_to("https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/")
            
     
     else:
@@ -81,8 +82,9 @@ def timeSelection(timeOption, mood, movie):
                                      <div class="btn">
                                           
                                     ''' % (False, mood , movie, 600 ), unsafe_allow_html=True)
-            if chat_botton and checkInputUserBoolean(movie):
-                nav_to("https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/")
+            if  checkInputUserBoolean(movie):
+                if chat_botton :
+                    nav_to("https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/")
 
 
                                 
