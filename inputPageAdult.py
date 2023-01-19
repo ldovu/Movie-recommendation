@@ -19,8 +19,7 @@ choicePreference = st.text_input('Which movie is similar to the one you want to 
 if mrs.checkTitolo(choicePreference):
     st.write("You would like to see a movie similar to ",  choicePreference )
 else:
-    st.warning('You might looked for: ', icon="⚠️")
-    mrs.forseCercavi(choicePreference)
+    st.write('You might looked for: ', mrs.forseCercavi(choicePreference))
 
 ##############  TIME SELECTION  ############## 
 st.header("TIME")
