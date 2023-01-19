@@ -2,12 +2,10 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 import numpy as np
 from tqdm import tqdm
-import numpy as np
 from Levenshtein import distance
 
 dataset_movies = pd.read_csv('movies_dataset_overview.csv')
 
-# funzione che raccomanda 10 film simili al film target
 def recommendMovies(dataset, film_target, amount=1):
         distance = []
         # movie = i valori della riga del film
@@ -24,15 +22,8 @@ def recommendMovies(dataset, film_target, amount=1):
         rec = rec.sort_values('distance')
         columns = ['title']
         return rec[columns][:amount]
-
-# funziona che raccomanda i 10 film più famosi del mood inserito
-def MoodRecommendation(dataset, amount=1):
-    rec = dataset.sort_values('revenue',ascending=False)
-    columns = ['title']
-    return rec[columns][:amount]
     
-# funzione che sceglie quali film tenere in base al mood    
-def selectMovies(df, mood):
+def onlyMoodMovies(df,mood):
     if (mood == 'RIDERE'):
         df1 = df[df.Comedy == 1]
         df1 = df1[df1.Animation != 1]
@@ -40,6 +31,55 @@ def selectMovies(df, mood):
         df1 = df1[df1.Action != 1]
         df1 = df1[df1.Drama != 1]
         df1 = df1[df1.ScienceFiction!= 1]
+        return df1
+    if (mood == 'PIANGERE'):
+        df1 = df[df.Drama == 1]
+        df1 = df1[df1.Animation != 1]
+        df1 = df1[df1.Fantasy != 1]
+        df1 = df1[df1.Action != 1]
+        df1 = df1[df1.ScienceFiction!= 1]
+        df1 = df1[df1.Horror != 1]
+        return df1
+    if (mood == 'AMORE'):
+        df1 = df[df.Romance == 1]
+        df1 = df1[df1.Animation != 1]
+        df1 = df1[df1.Fantasy != 1]
+        df1 = df1[df1.ScienceFiction!= 1]
+        return df1
+    if (mood == 'ADRENALINA'):
+        return df[df.Thriller == 1]
+    if (mood == 'PAURA'):
+        return df[df.Horror == 1]
+    if (mood == 'FANTASTICARE'):
+        return df[df.Fantasy == 1]
+    if (mood == 'SCIENCE FICTION'):
+        df1 = df[df.ScienceFiction == 1]
+        df1 = df1[df1.Fantasy != 1]
+        df1 = df1[df1.Action != 1]
+        return df1
+    if (mood == 'AVVENTURA'):
+        df1 = df[df.Adventure == 1]
+        df1 = df1[df1.Animation != 1]
+        df1 = df1[df1.Fantasy != 1]
+        df1 = df1[df1.ScienceFiction!= 1]
+        return df1
+    if (mood == 'CASUAL'):
+        return df
+    return df
+    
+
+def MoodRecommendation(dataset, mood, amount=1):
+    rec = onlyMoodMovies(dataset,mood)
+    rec = rec.sort_values('revenue',ascending=False)
+    columns = ['title']
+    return rec[columns][:amount]
+    
+
+# funzione che sceglie quali film tenere in base al mood    
+def selectMovies(df, mood):
+    if (mood == 'RIDERE'):
+        df1 = df[df.Comedy == 1]
+        df1 = df1[df1.Drama != 1]
         return df1
     if (mood == 'PIANGERE'):
         return df[df.Drama == 1]
@@ -59,6 +99,7 @@ def selectMovies(df, mood):
         return df
     return df
 
+
 # funzione per vedere se il film è presente nel dataset anche dopo i tagli
 def ispresent(lista, film):
     for x in lista:
@@ -66,13 +107,12 @@ def ispresent(lista, film):
             return True
     return False
 
-#
 def checkTitolo(titolo):
         for i in range(len(dataset_movies['original_title'])):
                 if (titolo.lower() == dataset_movies['original_title'][i].lower()):
                         return True
         return False
-     
+    
 def forseCercavi(film):
     lista = []
     for i in range(len(dataset_movies['original_title'])):
@@ -87,7 +127,7 @@ class MovieRecommendationSystem():
     def __init__(self):
         self.dataset = dataset_movies
         self.dataset = self.dataset.iloc[:,1:-1]
-    def recommend(self,for_kids,mood,film_target,Tmax ):
+    def recommend(self,for_kids,mood,film_target,Tmax):
         if (not(film_target == '')):
             movie = pd.Series(self.dataset[(self.dataset.original_title.str.lower() == film_target.lower())].head(1).values[0], index = self.dataset.columns )  
         d1 = self.dataset.iloc[:,1:]
@@ -105,7 +145,7 @@ class MovieRecommendationSystem():
         if (film_target == ''):
             titoli = self.dataset.iloc[:,0].values
             d1["title"] = titoli
-            recommendations = MoodRecommendation(d1,10)
+            recommendations = MoodRecommendation(d1,mood,10)
             return recommendations
         # se film_target inserito
         # se non è presente dopo i tagli riaggiungo il film preferito
