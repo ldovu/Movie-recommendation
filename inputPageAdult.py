@@ -33,11 +33,11 @@ choiceTime = st.radio("How much time do you have?", ["infinite","limited"], key=
 def check(title):
     if mrs.checkTitolo(title) or title==" ":
         st.write("You  would like to see a movie similar to ", title)
-    else:
-        mystring = " "
-        for x in mrs.forseCercavi(title): 
-            mystring+= ', ' + x
-            st.write("You might looked for: ", mystring)
+    #else:
+     #   mystring = " "
+      #  for x in mrs.forseCercavi(title): 
+       #     mystring+= ', ' + x
+        #    st.write("You might looked for: ", mystring)
 
 
 check(st.session_state.zxcvbn)      
