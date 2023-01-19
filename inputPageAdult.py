@@ -26,9 +26,8 @@ st.header("SIMILARITY")
 choicePreference = st.text_input('Which movie is similar to the one you want to watch?', key="zxcvbn")
 if mrs.checkTitolo(st.session_state.zxcvbn):
     st.write("You would like to see a movie similar to ",  st.session_state.zxcvbn )
-#else:
- #   st.warning('You might looked for: ', icon="⚠️")
-  #  mrs.forseCercavi(st.session.zxcvbn)
+else:
+    st.write('You might looked for: ',  mrs.forseCercavi(st.session.zxcvbn))
 
 
 
