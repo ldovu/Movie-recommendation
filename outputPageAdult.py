@@ -11,7 +11,7 @@ list1 = values.split('/?')
 child = list1[0].replace("qwerty=", "")
 mood = list1[1].replace("asdfgh=", "")
 film_target = list1[2].replace("zxcvbn=", "").replace("%20", " ")
-time =list1[3].replace("time=", "")
+Tmax =list1[3].replace("time=", "")
 
 for_kids = False
 
