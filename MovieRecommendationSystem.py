@@ -45,7 +45,7 @@ def onlyMoodMovies(df,mood):
                 df1 = df1[df1.ScienceFiction!= 1]
                 df1 = df1[df1.Horror != 1]
                 return df1
-         if (mood == 'AMORE'):
+        if (mood == 'AMORE'):
                 df1 = df[df.Romance == 1]
                 df1 = df1[df1.Animation != 1]
                 df1 = df1[df1.Fantasy != 1]
