@@ -66,7 +66,13 @@ def ispresent(lista, film):
             return True
     return False
 
-
+#
+def checkTitolo(titolo):
+        for i in range(len(dataset_movies['original_title'])):
+                if (titolo.lower() == dataset_movies['original_title'][i].lower()):
+                        return True
+        return False
+     
 def forseCercavi(film):
     lista = []
     for i in range(len(dataset_movies['original_title'])):
