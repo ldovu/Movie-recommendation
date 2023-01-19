@@ -22,6 +22,8 @@ df = recommended.reset_index(drop=True)
 
 st.write(df )
 
+
+#prova link per i link delle trame dei film 
 url = "https://ldovu-movie-recommendation-page0-awd4vf.streamlit.app/"
 st.write("check out this [link](%s)" % url)
 
