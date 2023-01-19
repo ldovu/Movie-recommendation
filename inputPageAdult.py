@@ -46,7 +46,7 @@ else:
                                      </center>
                                  <div class="btn">
                                       
-                                ''' % (False, st.session_state.asdfgh ,st.session_state.zxcvbn, np.Inf ), unsafe_allow_html=True)
+                                ''' % (False, st.session_state.asdfgh ,st.session_state.zxcvbn, 600 ), unsafe_allow_html=True)
 
 
 
