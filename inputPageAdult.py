@@ -29,11 +29,10 @@ choicePreference = st.text_input('Which movie is similar to the one you want to 
 if di.checkTitolo(st.session_state.zxcvbn) or st.session_state.zxcvbn=="":
         st.write("You  would like to see a movie similar to ", st.session_state.zxcvbn)
 else:
-    mystring = " "
-    for x in di.forseCercavi(st.session_state.zxcvbn):
-        mystring+= ' ' + x + ', '
-    mystring2 =  mystring[:-1]
-    st.write("You might looked for: ", mystring2)
+    
+    mystring = ",".join(di.forseCercavi(st.session_state.zxcvbn))
+      
+    st.write("You might looked for: ", mystring)
 
         
         
