@@ -31,8 +31,9 @@ if di.checkTitolo(st.session_state.zxcvbn) or st.session_state.zxcvbn=="":
 else:
     mystring = " "
     for x in di.forseCercavi(st.session_state.zxcvbn):
-        mystring+= ' ' + x + ', ' 
-    st.write("You might looked for: ", mystring[:-1])
+        mystring+= ' ' + x + ', '
+    mystring2 =  mystring[:-1]
+    st.write("You might looked for: ", mystring2)
 
         
         
