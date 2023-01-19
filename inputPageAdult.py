@@ -49,29 +49,6 @@ def checkInputUserBoolean(title):
 st.header("TIME")
 choiceTime = st.radio("How much time do you have?", ["infinite","limited"], key="minutes")
 
-st.markdown("""
-                <style>
-                    .checkout-button {
-                          width: 130px;
-                          height: 35px;
-                          background: #333;
-                          border: none;
-                          vertical-align: top;
-                          margin-left: 35px;
-                          cursor: pointer;
-                          color: #fff;
-                        }
-                        
-                    .checkout-button:disabled {
-                          background: #999;
-                          color: #555;
-                          cursor: not-allowed;
-}
-                    }
-                </style>
-            """ , unsafe_allow_html=True)
-
-
 def timeSelection(timeOption, mood, movie):
     if timeOption == 'limited':
             minute=st.slider('Select maximum minutes', 0, 360, 0)
@@ -80,16 +57,13 @@ def timeSelection(timeOption, mood, movie):
                                      <div class="div">
                                          <center>
                                              <a href="https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/?qwerty=%s/?asdfgh=%s/?zxcvbn=%s/?time=%s">
-                                                 <button class="checkout-button" id="checkout-button" disabled="disabled"> Go to prediction movies </button>
+                                                 <button disabled="disabled"> Go to prediction movies </button>
                                              </a>
                                          </center>
                                      <div class="btn">
                                           
                                     ''' % (False,mood , movie, minute), unsafe_allow_html=True)
-            if di.checkTitolo(movie)==False:
-                chat_button.disabled=True
-            else:
-                chat_button.disabled=False
+           
             if chat_botton :
                     nav_to("https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/")
            
