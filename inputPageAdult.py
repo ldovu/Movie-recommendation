@@ -77,17 +77,7 @@ def timeSelection(timeOption, mood, movie):
            
     
     else:
-            if di.checkTitolo(movie)==False or movie!="":
-                chat_botton = st.write(f'''
-                                     <div class="div">
-                                         <center>
-                                                 <button  disabled="disabled"> Go to prediction movies </button>
-                                         </center>
-                                     <div class="btn">
-                                          
-                                    ''', unsafe_allow_html=True)
-            else: 
-                chat_botton = st.write(f'''
+            chat_botton = st.write(f'''
                                      <div class="div">
                                          <center>
                                              <a href="https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/?qwerty=%s/?asdfgh=%s/?zxcvbn=%s/?time=%s">
