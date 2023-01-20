@@ -22,7 +22,7 @@ recommended = m.recommend(for_kids, mood, film_target , Tmax )
 
 
 for row in recommended.iterrows():
-    for y in di.checkTitolo(row):
+    for y in di.trovaOverview(row):
         overviewColumn={row:y}
 
 # Using 'Address' as the column name and equating it to the list
