@@ -40,6 +40,9 @@ def checkInputUserBoolean(title):
         #st.error("Incorrect title movie")
         return False 
 
+############################  TIME SELECTION  ############################ 
+st.header("TIME")
+choiceTime = st.radio("How much time do you have?", ["infinite","limited"], key="minutes")
 
 def timeSelection(timeOption, movie):
     if timeOption == 'limited':
