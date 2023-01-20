@@ -21,16 +21,18 @@ m = mrs.MovieRecommendationSystem()
 recommended = m.recommend(for_kids, mood, film_target , Tmax )
 
 
+'''
 for row in recommended.iterrows():
     for y in di.trovaOverview(row):
         overviewColumn={row:y}
 
 # Using 'Address' as the column name and equating it to the list
 df = recommended.assign(overview =overviewColumn)
+'''
+
+
+df = recommended.reset_index(drop=True)
 st.write(df)
-
-#df = recommended.reset_index(drop=True)
-
 
 #prova link per i link delle trame dei film 
 #url = "https://ldovu-movie-recommendation-page0-awd4vf.streamlit.app/"
