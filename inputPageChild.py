@@ -19,6 +19,28 @@ def nav_to(url):
 st.header("SIMILARITY")
 choicePreference = st.text_input('Which movie is similar to the one you want to watch? (_optional_)', key="zxcvbn")
 
+############################ CHECK IF TITLE IS WRONG THEN RECOMMEND THE CORRECT ONE ############################
+def checkInputUser(title):
+    if di.checkTitolo(title) or title=="":
+        st.write("You  would like to see a movie similar to ", title)
+    else:
+        
+        mystring = ", ".join(di.forseCercavi(title))
+          
+        st.write("You might looked for: ", mystring)
+
+
+checkInputUser(st.session_state.zxcvbn)
+
+############################ CHECK IF TITLE IS WRONG THEN OUTPUT A BOOLEAN VALUE ############################
+def checkInputUserBoolean(title):
+    if di.checkTitolo(title) or title=="":
+        return True
+    else: 
+        #st.error("Incorrect title movie")
+        return False 
+
+
 def timeSelection(timeOption, movie):
     if timeOption == 'limited':
             minute=st.slider('Select maximum minutes', 0, 360, 0)
