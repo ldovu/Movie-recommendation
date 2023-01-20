@@ -25,7 +25,7 @@ st.radio('Which emotion would you like to try?', df, key="asdfgh")
 st.header("SIMILARITY")
 choicePreference = st.text_input('Which movie is similar to the one you want to watch? (_optional_)', key="zxcvbn")
 
- 
+############################ CHECK IF TITLE IS WRONG THEN RECOMMEND THE CORRECT ONE ############################
 def checkInputUser(title):
     if di.checkTitolo(title) or title=="":
         st.write("You  would like to see a movie similar to ", title)
@@ -38,6 +38,7 @@ def checkInputUser(title):
 
 checkInputUser(st.session_state.zxcvbn)
 
+############################ CHECK IF TITLE IS WRONG THEN OUTPUT A BOOLEAN VALUE ############################
 def checkInputUserBoolean(title):
     if di.checkTitolo(title) or title=="":
         return True
