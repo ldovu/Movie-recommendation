@@ -19,8 +19,15 @@ Tmax = int(time)
 
 m = mrs.MovieRecommendationSystem()
 recommended = m.recommend(for_kids, mood, film_target , Tmax )
-st.write(recommended )
 
+
+for x in recommended.iloc[:,1]:
+    for y in di.checkTitolo(x):
+        overviewColumn={x:y}
+
+# Using 'Address' as the column name and equating it to the list
+df = recommended.assign(overview =overviewColumn)
+st.write(df)
 #df = recommended.reset_index(drop=True)
 
 
