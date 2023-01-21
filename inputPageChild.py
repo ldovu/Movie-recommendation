@@ -61,7 +61,7 @@ class Time:
 time = Time()
 
 class InputIn:
-    def goToPage(self, mood, movie, time):
+    def goToPage(self, movie, time):
         if time == "limited":
             st.slider('Select maximum minutes', 0, 360, 0, key="number")
                 
