@@ -26,9 +26,13 @@ st.write(recommended)
 
 listOverview = []
 
-for i in range(recommended.shape[0]):#iterate over rows
-  value= recommended.at[i, 1]
-  st.write(value)
+for i in range(recommended.shape[0]): #iterate over rows 
+    value= di.trovaOverview(recommended.at[i, 1])
+    listOverview.append(value)
+    
+st.write(listOverview)
+
+
         
         
        
