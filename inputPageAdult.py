@@ -33,7 +33,7 @@ class MovieTarget:
         st.text_input('Which movie is similar to the one you want to watch? (optional)', key="zxcvbn")
 
     def returnMovie(self):
-        return st.session_state.zxcvbn
+        return st.session_state.zxcvbn or ""
 
 movie = MovieTarget()
 
