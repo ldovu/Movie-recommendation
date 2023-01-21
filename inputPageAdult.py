@@ -68,15 +68,16 @@ class Time:
         return st.session_state.minutes
 
     
-    def minuteSelection(self):
+    def minuteSelection(self ):
         if self.returnTime()=="limited":
-            minute=st.slider('Select maximum minutes', 0, 360, 0)
-            return minute
+            st.slider('Select maximum minutes', 0, 360, 0, key="number" )
+            return st.session_state.number
         elif self.returnTime()=="infinite": 
-            return int(600)
+            return 600
        
 time = Time()
 st.write(time.minuteSelection())
+st.write(type(returnTime))
         
 class InputIn:
     def __init__(self, mood, movie, times ):
@@ -110,13 +111,6 @@ class InputIn:
                
        
 InputIn(mood.returnMood(), movie.returnMovie(), time.minuteSelection()).goToPage()
-
-
-
-
-
-
-
 
 
 
