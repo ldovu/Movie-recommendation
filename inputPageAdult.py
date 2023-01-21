@@ -50,7 +50,7 @@ def checkInputUser(title):
         st.write("You might looked for: ", mystring)
 
 
-#st.write(checkInputUser(movie.returnMovie()))
+st.write(checkInputUser(movie.returnMovie()))
 
 ############################ CHECK IF TITLE IS WRONG THEN OUTPUT A BOOLEAN VALUE ############################
 def checkInputUserBoolean(title):
