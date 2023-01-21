@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import DatasetInspection as di
-
+import time
 
 st.title('Movie recommendation system')
 
@@ -75,6 +75,7 @@ class InputIn:
     def goToPage(self, mood, movie, time):
         if time =="limited":
             st.slider('Select maximum minutes', 0, 360, 0, key="number" )
+            time.sleep(1)
             if checkInputUserBoolean(movie)==False :
                     chat_botton = st.write(f'''
                                          <div class="div">
