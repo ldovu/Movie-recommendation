@@ -26,24 +26,9 @@ st.write(recommended)
 
 listOverview = []
 
-for i in range(recommended.shape[0]): #iterate over rows
-    for j in range(recommended.shape[1]): #iterate over columns
-        value= recommended.at[i, j]
-        st.write(value)
+for i in range(recommended.shape[0]):#iterate over rows
+  value= recommended.at[i, 1]
+  st.write(value)
         
         
-        #listOverview.append(value)
-
-# Using 'Address' as the column name and equating it to the list
-#st.write(listOverview)
-
-
-
-
-#df = recommended.reset_index(drop=True)
-
-
-
-
-
-
+       
