@@ -14,10 +14,11 @@ def nav_to(url):
     
 
 ############################  MOOD SELECTION  ############################
-st.header("MOOD")
+#st.header("MOOD")
 df= pd.DataFrame(["laugh","cry", "adrenaline", "adventure","love", "fear", "fantasy", "science fiction", "casual"])
 
 class Mood:
+    st.header("MOOD")
     def __init__(self):
         st.radio('Which emotion would you like to try?', df, key="asdfgh")
 
@@ -27,15 +28,16 @@ class Mood:
 mood = Mood() #create an object mood
 
 ############################ MOVIE SELECTION ############################ 
-st.header("SIMILARITY")
 class MovieTarget:
     def __init__(self):
+        st.header("SIMILARITY")
         st.text_input('Which movie is similar to the one you want to watch? (optional)', key="zxcvbn")
 
     def returnMovie(self):
-        return st.session_state.zxcvbn or ""
+        return st.session_state.zxcvbn
 
 movie = MovieTarget()
+
 
 ############################ CHECK USER INPUT ############################
 def checkInputUser(title):
@@ -62,26 +64,16 @@ def checkInputUserBoolean(title):
 class Time:
     def __init__(self):
         st.header("TIME")
-        st.radio("How much time do you have?", ["infinite","limited"], key="minutes")
+        choiceTime = st.radio("How much time do you have?", ["infinite","limited"], key="minutes")
         
     def returnTime(self):
         return st.session_state.minutes
 
     
-    def minuteSelection(self ):
-        if self.returnTime()=="limited":
-            st.slider('Select maximum minutes', 0, 360, 0, key="number" )
-            return st.session_state.number
-        elif self.returnTime()=="infinite": 
-            return 600
-       
-time = Time()
-st.write(time.minuteSelection())
-
-        
-class InputIn:  
-    def goToPage(self, mood, movie, time):
-        if checkInputUserBoolean(movie)==False :
+    def timeSelection(self, timeOption, mood, movie):
+        if timeOption == 'limited':
+                minute=st.slider('Select maximum minutes', 0, 360, 0)
+                if checkInputUserBoolean(movie)==False :
                     chat_botton = st.write(f'''
                                          <div class="div">
                                              <center>
@@ -90,7 +82,7 @@ class InputIn:
                                          <div class="btn">
                                               
                                         ''', unsafe_allow_html=True)
-        else: 
+                else: 
                     chat_botton = st.write(f'''
                                          <div class="div">
                                              <center>
@@ -100,12 +92,51 @@ class InputIn:
                                              </center>
                                          <div class="btn">
                                               
-                                        ''' % (False, mood, movie, time), unsafe_allow_html=True)
-        if chat_botton :
+                                        ''' % (False,mood , movie, minute), unsafe_allow_html=True)
+                if chat_botton :
                     nav_to("https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/")
                
-  
-InputIn(mood.returnMood(), movie.returnMovie(), time.minuteSelection()).goToPage()
+        
+        else:
+            if checkInputUserBoolean(movie)==False :
+                    chat_botton = st.write(f'''
+                                         <div class="div">
+                                             <center>
+                                                     <button  disabled="disabled"> Go to prediction movies </button>
+                                             </center>
+                                         <div class="btn">
+                                              
+                                        ''', unsafe_allow_html=True)
+            else: 
+                chat_botton = st.write(f'''
+                                         <div class="div">
+                                             <center>
+                                                 <a href="https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/?qwerty=%s/?asdfgh=%s/?zxcvbn=%s/?time=%s">
+                                                     <button> Go to prediction movies </button>
+                                                 </a>
+                                             </center>
+                                         <div class="btn">
+                                              
+                                        ''' % (False,mood , movie, 600), unsafe_allow_html=True)
+                if chat_botton :
+                    nav_to("https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/")
+                                    
+time = Time()
+
+time.timeSelection(time.returnTime() , mood.returnMood(), movie.returnMovie())
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
