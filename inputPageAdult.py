@@ -94,7 +94,7 @@ class InputIn:
                                              </center>
                                          <div class="btn">
                                               
-                                        ''' % (False, mood, movie, time), unsafe_allow_html=True)
+                                        ''' % (False, mood, movie, st.session_state.number), unsafe_allow_html=True)
         else: 
             if checkInputUserBoolean(movie)==False :
                     chat_botton = st.write(f'''
