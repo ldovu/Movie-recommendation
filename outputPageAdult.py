@@ -28,7 +28,7 @@ listOverview = []
 
 for i in range(recommended.shape[0]): #iterate over rows
     for j in range(recommended.shape[1]): #iterate over columns
-        value = di.trovaOverview(str(recommended.at[i, j]))
+        value= recommended.at[i, j]
         listOverview.append(value)
 
 # Using 'Address' as the column name and equating it to the list
