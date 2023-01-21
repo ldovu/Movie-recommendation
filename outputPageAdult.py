@@ -24,6 +24,12 @@ recommended = m.recommend(for_kids, mood, film_target , Tmax )
 st.write(recommended)
 #crea una colonna overview basata sulla colonna esistente di 
 
+ser = recommended.iloc[:,0]
+
+st.write(type(ser))
+st.write(ser)
+
+
 listOverview = []
 
 for i in range(recommended.shape[0]): #iterate over rows 
