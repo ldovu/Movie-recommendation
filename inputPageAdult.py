@@ -77,7 +77,7 @@ class Time:
        
 time = Time()
 st.write(time.minuteSelection())
-st.write(type(returnTime))
+
         
 class InputIn:
     def __init__(self, mood, movie, times ):
