@@ -70,8 +70,8 @@ class Time:
         return st.session_state.minutes
 
     
-    def timeSelection(self, mood, movie):
-        if self.returnTime == 'limited':
+    def timeSelection(self, timeOption, mood, movie):
+        if timeOption == 'limited':
                 minute=st.slider('Select maximum minutes', 0, 360, 0)
                 if checkInputUserBoolean(movie)==False :
                     chat_botton = st.write(f'''
@@ -123,7 +123,7 @@ class Time:
                                     
 time = Time()
 
-time.timeSelection(mood.returnMood(), movie.returnMovie())
+time.timeSelection(time.returnTime() , mood.returnMood(), movie.returnMovie())
 
 
 
