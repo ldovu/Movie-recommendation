@@ -30,7 +30,7 @@ with col2:
                                          </center>
                                      <div class="btn">
 
-                                    ''' % (st.session_state.qwerty), unsafe_allow_html=True)
+                                    ''' % (False), unsafe_allow_html=True)
         if chat_botton1 :
                 nav_to("https://ldovu-movie-recommendation-inputpageadult-45z3ld.streamlit.app/")
     elif st.session_state.qwerty == user1.a :
@@ -43,7 +43,7 @@ with col2:
                                          </center>
                                      <div class="btn">
 
-                                    ''' % (st.session_state.qwerty), unsafe_allow_html=True)
+                                    ''' % (True), unsafe_allow_html=True)
         if chat_botton2 :
                 nav_to("https://ldovu-movie-recommendation-inputpagechild-2jx062.streamlit.app/")
                 
