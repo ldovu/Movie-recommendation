@@ -110,7 +110,7 @@ class InputIn:
                                          <div class="btn">
                                               
                                         ''' % (True, movie, 600), unsafe_allow_html=True)
-                if chat_botton :
+            if chat_botton :
                     nav_to("https://ldovu-movie-recommendation-outputpagechild-qi8pl4.streamlit.app/") 
     
                 
