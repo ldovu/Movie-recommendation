@@ -66,7 +66,7 @@ def timeSelection(timeOption, movie):
                                          </center>
                                      <div class="btn">
                                           
-                                    ''' % (False , movie, minute), unsafe_allow_html=True)
+                                    ''' % (True , movie, minute), unsafe_allow_html=True)
             if chat_botton :
                 nav_to("https://ldovu-movie-recommendation-outputpagechild-qi8pl4.streamlit.app/")
            
@@ -91,7 +91,7 @@ def timeSelection(timeOption, movie):
                                          </center>
                                      <div class="btn">
                                           
-                                    ''' % (False, movie, 600), unsafe_allow_html=True)
+                                    ''' % (True, movie, 600), unsafe_allow_html=True)
             if chat_botton :
                 nav_to("https://ldovu-movie-recommendation-outputpagechild-qi8pl4.streamlit.app/") 
     
