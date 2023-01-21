@@ -72,10 +72,11 @@ class Time:
         if self.returnTime()=="limited":
             minute=st.slider('Select maximum minutes', 0, 360, 0)
             return minute
-        else: 
+        elif self.returnTime()=="infinite": 
             return int(600)
        
 time = Time()
+st.write(time.minuteSelection())
         
 class InputIn:
     def __init__(self, mood, movie, times ):
