@@ -71,10 +71,10 @@ class Time:
     
     def minuteSelection(self):
         if self.returnTime()=="limited":
-            minute = minute=st.slider('Select maximum minutes', 0, 360, 0)
+            minute=st.slider('Select maximum minutes', 0, 360, 0)
             return minute
         else: 
-            return 600
+            return int(600)
        
 time = Time()
         
