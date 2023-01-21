@@ -24,7 +24,7 @@ with col2:
         chat_botton1 = st.write(f'''
                                      <div class="div">
                                          <center>
-                                             <a href="https://ldovu-movie-recommendation-inputpageadult-45z3ld.streamlit.app/?qwerty=%s">
+                                             <a href="https://ldovu-movie-recommendation-inputpageadult-ksx813.streamlit.app/?qwerty=%s">
                                                  <button> Move to the next question </button>
                                              </a>
                                          </center>
