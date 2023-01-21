@@ -36,7 +36,7 @@ class MovieTarget:
         return st.session_state.zxcvbn or ""
 
 movie = MovieTarget()
-
+title= movie.returnMovie()
 
 ############################ CHECK USER INPUT ############################
 def checkInputUser(title):
