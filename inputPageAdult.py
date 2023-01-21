@@ -80,12 +80,12 @@ time = Time()
         
 class InputIn:
     def __init__(self, mood, movie, times ):
-        self.emotion = mood
-        self.fav = movie
-        self.time = times
+        self.mood = mood
+        self.movie = movie
+        self.time = time
         
     def goToPage(self):
-        if checkInputUserBoolean(movie)==False :
+        if checkInputUserBoolean(self.movie)==False :
                     chat_botton = st.write(f'''
                                          <div class="div">
                                              <center>
@@ -104,14 +104,12 @@ class InputIn:
                                              </center>
                                          <div class="btn">
                                               
-                                        ''' % (False,mood , movie, time.minuteSelection()), unsafe_allow_html=True)
+                                        ''' % (False,self.mood , self.movie, self.time), unsafe_allow_html=True)
         if chat_botton :
                     nav_to("https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/")
                
        
-inputObject = InputIn(mood.returnMood(), movie.returnMovie(), time.minuteSelection())
-
-inputObject.goToPage()
+InputIn(mood.returnMood(), movie.returnMovie(), time.minuteSelection()).goToPage()
 
 
 
