@@ -17,15 +17,15 @@ def nav_to(url):
 #st.header("MOOD")
 df= pd.DataFrame(["laugh","cry", "adrenaline", "adventure","love", "fear", "fantasy", "science fiction", "casual"])
 
-class Mood: 
+class Mood:
+    st.header("MOOD")
     def __init__(self):
-        st.header("MOOD")
         st.radio('Which emotion would you like to try?', df, key="asdfgh")
 
     def returnMood(self):
-        return st.write(st.session_state.asdfgh)
+        return st.session_state.asdfgh
         
-mood = Mood()
+mood = Mood() #create an object mood
 
 ############################ MOVIE SELECTION ############################ 
 class MovieTarget:
@@ -50,7 +50,7 @@ def checkInputUser(title):
         st.write("You might looked for: ", mystring)
 
 
-st.write(checkInputUser(movie.returnMovie()))
+#st.write(checkInputUser(movie.returnMovie()))
 
 ############################ CHECK IF TITLE IS WRONG THEN OUTPUT A BOOLEAN VALUE ############################
 def checkInputUserBoolean(title):
