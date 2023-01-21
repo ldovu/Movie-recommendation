@@ -21,14 +21,15 @@ Tmax = int(time)
 m = mrs.MovieRecommendationSystem()
 recommended = m.recommend(for_kids, mood, film_target , Tmax )
 
+st.write(recommended)
+#crea una colonna overview basata sulla colonna esistente di 
+
 listOverview = []
 
 for i in range(recommended.shape[0]): #iterate over rows
     for j in range(recommended.shape[1]): #iterate over columns
-        value = di.trovaOverview(recommended.at[i, j])
+        value = di.trovaOverview(str(recommended.at[i, j]))
         listOverview.append(value)
-        
-st.write(recommended)
 
 # Using 'Address' as the column name and equating it to the list
 st.write(listOverview)
