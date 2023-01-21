@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import MovieRecommendationSystem as mrs
+import numpy as np
 
 
 #get query parameters
@@ -20,7 +21,7 @@ Tmax = int(time)
 m = mrs.MovieRecommendationSystem()
 recommended = m.recommend(for_kids, mood, film_target , Tmax )
 
-st.write(recommended.to_string())
+st.write(recommended.to_numpy())
 
 
 #df = recommended.reset_index(drop=True)
