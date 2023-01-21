@@ -22,16 +22,10 @@ m = mrs.MovieRecommendationSystem()
 recommended = m.recommend(for_kids, mood, film_target , Tmax )
 
 #crea una colonna overview basata sulla colonna esistente di 
-
-ser = recommended.iloc[:,0]
-
-st.write(ser)
-
-
 listOverview = []
 
-for i in range(len(ser)): #iterate over rows 
-    value= di.trovaOverview(ser.at[i, 1])
+for i in range(recommended.shape[0]): #iterate over rows 
+    value= di.trovaOverview(recommended.at[i, 1])
     listOverview.append(value)
     
 st.write(listOverview)
