@@ -31,7 +31,7 @@ for i in range(len(listRecom)):
     listOverview.append(value)
     
     
-col1, col2, col3, col4, col5 = st.columns([3,3,3,3,3])
+col1, col2, col3, col4, col5 = st.columns([4,4,4,4,4])
 
 
 with col1:
