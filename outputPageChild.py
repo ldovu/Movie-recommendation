@@ -40,7 +40,7 @@ with col1:
          <div > <big><b> %s </b></big>
          </div>
          ''' % (listRecom[0]), unsafe_allow_html=True)
-    expander = st.expander("See the overview")
+    expander = st.expander("See the overview", expanded=True)
     expander.write(listOverview[0] )
     
     st.write("")
