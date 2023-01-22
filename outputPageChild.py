@@ -42,7 +42,7 @@ def iterate(lista):
 col1, col2 = st.columns(2)
 
 with col1:
-    for i in range(1,6):
+    for i in range(0,5):
            st.write(f'''
                 <div > <big><b>%d- %s </b></big>
                 </div>
