@@ -26,7 +26,10 @@ listRecom = recommended['title'].values
 
 listOverview = []
 
-for i in range(len(listRecom)): #iterate over rows 
+cols = st.columns(len(listRecom))
+
+for i in range(len(listRecom)):
+    col = cols[i]
     value = di.trovaOverview(listRecom[i])
     listOverview.append(value)
     st.write(listRecom[i])
