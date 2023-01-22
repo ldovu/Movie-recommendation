@@ -32,8 +32,10 @@ for i in range(len(listRecom)):
     col = cols[i]
     value = di.trovaOverview(listRecom[i])
     listOverview.append(value)
-    st.write(listRecom[i])
+    col.st.write(listRecom[i])
     
     expander = st.expander("See the overview")
-    expander.write(listOverview[i] )
+    col.expander.write(listOverview[i] )
+
+
     
