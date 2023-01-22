@@ -50,13 +50,14 @@ with col1:
 
 
 with col2:
-    for i in range(6,10):
+    for i in range(5,10):
            st.write(f'''
                 <div > <big><b>%d- %s </b></big>
                 </div>
                 ''' % (i+1, listRecom[i]), unsafe_allow_html=True)
 
-    
+st.text("")
+st.text("")
     
 option= st.selectbox("See the overview of", (listRecom[0],listRecom[1],listRecom[2],listRecom[3],listRecom[4],listRecom[5],listRecom[6],
                                                  listRecom[7],listRecom[8],listRecom[9]))
