@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import MovieRecommendationSystem as mrs
 import numpy as np
+import DatasetInspection as di
 
 
 #get query parameters
