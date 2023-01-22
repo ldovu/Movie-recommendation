@@ -34,12 +34,13 @@ for i in range(len(listRecom)):
 col1, col2 = st.columns(2)
 with col1:
     for i in range(len(listRecom)):
-        for j in range(1, 11):
            st.write(f'''
                 <div > <big><b>%d- %s </b></big>
                 </div>
-                ''' % (j, listRecom[i]), unsafe_allow_html=True)
-       
+                ''' % (i+1, listRecom[i]), unsafe_allow_html=True)
+                
+      
+      
 with col2:
     st.write("ciao")
     
