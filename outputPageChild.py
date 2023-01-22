@@ -31,35 +31,73 @@ for i in range(len(listRecom)):
     listOverview.append(value)
     
     
-col1, col2, col3, col4, col5 = st.columns([1,1,1,1,1])
+col1, col2, col3, col4, col5 = st.columns([2,2,2,2,2])
+
 
 with col1:
-    st.write(listRecom[0])
+    st.subheader(listRecom[0])
     expander = st.expander("See the overview")
     expander.write(listOverview[0] )
     
+    st.write("")
+    st.write("")
+    
+    st.subheader(listRecom[5])
+    expander = st.expander("See the overview")
+    expander.write(listOverview[5] )
+    
+    
 with col2:
-    st.write(listRecom[1])
+    st.subheader(listRecom[1])
     expander = st.expander("See the overview")
     expander.write(listOverview[1])
+    
+    st.write("")
+    st.write("")
+    
+    st.subheader(listRecom[6])
+    expander = st.expander("See the overview")
+    expander.write(listOverview[6] )
+    
 
 with col3:
-    st.write(listRecom[2])
+    st.subheader(listRecom[2])
     expander = st.expander("See the overview")
     expander.write(listOverview[2])
+    
+    st.write("")
+    st.write("")
+    
+    st.subheader(listRecom[7])
+    expander = st.expander("See the overview")
+    expander.write(listOverview[7] )
+    
+
 
 with col4:
-    st.write(listRecom[3])
+    st.subheader(listRecom[3])
     expander = st.expander("See the overview")
     expander.write(listOverview[3])
+    
+    st.write("")
+    st.write("")
+    
+    st.subheader(listRecom[8])
+    expander = st.expander("See the overview")
+    expander.write(listOverview[8] )
+    
 
 with col5:
-    st.write(listRecom[4])
+    st.subheader(listRecom[4])
     expander = st.expander("See the overview")
     expander.write(listOverview[4])
-
     
+    st.write("")
+    st.write("")
     
+    st.subheader(listRecom[9])
+    expander = st.expander("See the overview")
+    expander.write(listOverview[9] )
     
     
     
