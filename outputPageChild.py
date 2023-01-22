@@ -31,12 +31,13 @@ for i in range(len(listRecom)):
     listOverview.append(value)
     
     
-col1, col2, col3, col4, col5 = st.columns(5)
+    
+col1, col2, col3, col4= st.columns(4)
 
 
 with col1:
     st.write(f'''
-         <div > <b> %s </b>
+         <div > <big><b> %s </b></big>
          </div>
          ''' % (listRecom[0]), unsafe_allow_html=True)
     expander = st.expander("See the overview")
@@ -45,62 +46,100 @@ with col1:
     st.write("")
     st.write("")
     
-    st.subheader(listRecom[5])
+    st.write(f'''
+        <div > <big><b> %s </b></big>
+        </div>
+        ''' % (listRecom[4]), unsafe_allow_html=True)
+   
+    expander = st.expander("See the overview")
+    expander.write(listOverview[4] )
+    
+    st.write("")
+    st.write("")
+    
+    st.write(f'''
+        <div > <big><b> %s </b></big>
+        </div>
+        ''' % (listRecom[8]), unsafe_allow_html=True)
+   
+    expander = st.expander("See the overview")
+    expander.write(listOverview[8] )
+    
+    
+    
+with col2:
+    st.write(f'''
+        <div > <big><b> %s </b></big>
+        </div>
+        ''' % (listRecom[1]), unsafe_allow_html=True)
+   
+    expander = st.expander("See the overview")
+    expander.write(listOverview[1] )
+    
+    st.write("")
+    st.write("")
+    
+    st.write(f'''
+        <div > <big><b> %s </b></big>
+        </div>
+        ''' % (listRecom[5]), unsafe_allow_html=True)
+   
     expander = st.expander("See the overview")
     expander.write(listOverview[5] )
     
     
-with col2:
-    st.subheader(listRecom[1])
-    expander = st.expander("See the overview")
-    expander.write(listOverview[1])
-    
     st.write("")
     st.write("")
     
-    st.subheader(listRecom[6])
-    expander = st.expander("See the overview")
-    expander.write(listOverview[6] )
-    
-
-with col3:
-    st.subheader(listRecom[2])
-    expander = st.expander("See the overview")
-    expander.write(listOverview[2])
-    
-    st.write("")
-    st.write("")
-    
-    st.subheader(listRecom[7])
-    expander = st.expander("See the overview")
-    expander.write(listOverview[7] )
-    
-
-
-with col4:
-    st.subheader(listRecom[3])
-    expander = st.expander("See the overview")
-    expander.write(listOverview[3])
-    
-    st.write("")
-    st.write("")
-    
-    st.subheader(listRecom[8])
-    expander = st.expander("See the overview")
-    expander.write(listOverview[8] )
-    
-
-with col5:
-    st.subheader(listRecom[4])
-    expander = st.expander("See the overview")
-    expander.write(listOverview[4])
-    
-    st.write("")
-    st.write("")
-    
-    st.subheader(listRecom[9])
+    st.write(f'''
+        <div > <big><b> %s </b></big>
+        </div>
+        ''' % (listRecom[9]), unsafe_allow_html=True)
+   
     expander = st.expander("See the overview")
     expander.write(listOverview[9] )
     
+    
+
+with col3:
+    st.write(f'''
+        <div > <big><b> %s </b></big>
+        </div>
+        ''' % (listRecom[2]), unsafe_allow_html=True)
+   
+    expander = st.expander("See the overview")
+    expander.write(listOverview[2] )
+    
+    st.write("")
+    st.write("")
+    
+    st.write(f'''
+        <div > <big><b> %s </b></big>
+        </div>
+        ''' % (listRecom[6]), unsafe_allow_html=True)
+   
+    expander = st.expander("See the overview")
+    expander.write(listOverview[6] )
+    
+    
+with col4:
+    st.write(f'''
+        <div > <big><b> %s </b></big>
+        </div>
+        ''' % (listRecom[3]), unsafe_allow_html=True)
+   
+    expander = st.expander("See the overview")
+    expander.write(listOverview[3] )
+    
+    st.write("")
+    st.write("")
+    
+    st.write(f'''
+        <div > <big><b> %s </b></big>
+        </div>
+        ''' % (listRecom[7]), unsafe_allow_html=True)
+   
+    expander = st.expander("See the overview")
+    expander.write(listOverview[7] )
     
     
