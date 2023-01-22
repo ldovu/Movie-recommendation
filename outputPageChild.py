@@ -35,7 +35,7 @@ col1, col2, col3, col4, col5 = st.columns(5)
 
 
 with col1:
-    st.markdown(**listRecom[0]**)
+    st.markdown(listRecom[0])
     expander = st.expander("See the overview")
     expander.write(listOverview[0] )
     
