@@ -28,12 +28,13 @@ listRecom = recommended['title'].values
 listOverview = []
 
 for i in range(len(listRecom)): #iterate over rows 
-    value= di.trovaOverview(listRecom[i])
+    value = di.trovaOverview(listRecom[i])
     listOverview.append(value)
-
-for j in range(len(listOverview)):
+    st.write(listRecom[i])
+    
     expander = st.expander("See the overview")
-    expander.write(j)
+    expander.write(listOverview[i] )
+
 
         
         
