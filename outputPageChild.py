@@ -26,21 +26,32 @@ listRecom = recommended['title'].values
 
 listOverview = []
 
+st.header("Recommended movies:")
+
+
 for i in range(len(listRecom)):
     value = di.trovaOverview(listRecom[i])
     listOverview.append(value)
     
     
+
+def iterate(lista):
+    for i in lista:
+        st.write(i)
+
 col1, col2 = st.columns(2)
+
 with col1:
     for i in range(len(listRecom)):
            st.write(f'''
                 <div > <big><b>%d- %s </b></big>
                 </div>
                 ''' % (i+1, listRecom[i]), unsafe_allow_html=True)
-                
-      
-      
+
+
+
 with col2:
-    st.write("ciao")
     
+    option= st.selectbox("See the overview of",  iterate(listRecom) )               
+       
+
