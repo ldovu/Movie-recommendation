@@ -35,7 +35,10 @@ col1, col2, col3, col4, col5 = st.columns(5)
 
 
 with col1:
-    st.markdown(listRecom[0])
+    st.write(f'''
+         <div > <b> %s </b>
+         </div>
+         ''' % (listRecom[0]), unsafe_allow_html=True)
     expander = st.expander("See the overview")
     expander.write(listOverview[0] )
     
