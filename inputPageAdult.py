@@ -31,7 +31,7 @@ mood = Mood() #create an object mood
 class MovieTarget:
     def __init__(self):
         st.header("SIMILARITY")
-        st.text_input('Which movie is similar to the one you want to watch? (optional)', key="zxcvbn")
+        st.text_input('Which movie is similar to the one you want to watch? (*optional*)', key="zxcvbn")
 
     def returnMovie(self):
         return st.session_state.zxcvbn
