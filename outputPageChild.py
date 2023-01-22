@@ -51,8 +51,7 @@ with col1:
     
 with col2:
         
-    option= st.selectbox("See the overview of", (listRecom[0],listRecom[1],listRecom[2],listRecom[3],listRecom[4],listRecom[5],listRecom[6],
-                                                     listRecom[7],listRecom[8],listRecom[9]))
+    option= st.selectbox("See the overview of", (iterate(listRecom))
     st.write(di.trovaOverview(option))
 
 
