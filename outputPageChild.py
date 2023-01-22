@@ -26,16 +26,40 @@ listRecom = recommended['title'].values
 
 listOverview = []
 
-cols = st.columns(len(listRecom))
-
 for i in range(len(listRecom)):
-    col = cols[i]
     value = di.trovaOverview(listRecom[i])
     listOverview.append(value)
-    col.st.write(listRecom[i])
     
+    
+col1, col2, col3, col4, col5 = st.columns(5)
+
+with col1:
+    st.write(listRecom[0])
     expander = st.expander("See the overview")
-    col.expander.write(listOverview[i] )
+    expander.write(listOverview[0] )
+    
+with col2:
+    st.write(listRecom[1])
+    expander = st.expander("See the overview")
+    expander.write(listOverview[1])
 
+with col3:
+    st.write(listRecom[2])
+    expander = st.expander("See the overview")
+    expander.write(listOverview[2])
 
+with col4:
+    st.write(listRecom[3])
+    expander = st.expander("See the overview")
+    expander.write(listOverview[3])
+
+with col5:
+    st.write(listRecom[4])
+    expander = st.expander("See the overview")
+    expander.write(listOverview[4])
+
+    
+    
+    
+    
     
