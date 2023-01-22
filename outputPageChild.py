@@ -38,29 +38,22 @@ for i in range(len(listRecom)):
 def iterate(lista):
     for i in lista:
         st.write(i)
-
+        
 col1, col2 = st.columns(2)
 
 with col1:
-    for i in range(0,5):
+    for i in range(1,10):
            st.write(f'''
                 <div > <big><b>%d- %s </b></big>
                 </div>
                 ''' % (i+1, listRecom[i]), unsafe_allow_html=True)
 
-
-with col2:
-    for i in range(5,10):
-           st.write(f'''
-                <div > <big><b>%d- %s </b></big>
-                </div>
-                ''' % (i+1, listRecom[i]), unsafe_allow_html=True)
-
-st.text("")
-st.text("")
     
-option= st.selectbox("See the overview of", (listRecom[0],listRecom[1],listRecom[2],listRecom[3],listRecom[4],listRecom[5],listRecom[6],
-                                                 listRecom[7],listRecom[8],listRecom[9]))
-st.write(di.trovaOverview(option))
+with col2:
+        
+    option= st.selectbox("See the overview of", (listRecom[0],listRecom[1],listRecom[2],listRecom[3],listRecom[4],listRecom[5],listRecom[6],
+                                                     listRecom[7],listRecom[8],listRecom[9]))
+    st.write(di.trovaOverview(option))
+
 
 
