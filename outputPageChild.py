@@ -33,11 +33,7 @@ for i in range(len(listRecom)):
     value = di.trovaOverview(listRecom[i])
     listOverview.append(value)
     
-    
-
-def iterate(lista):
-    for i in lista:
-        st.write(i)
+   
         
 col1, col2 = st.columns(2)
 
