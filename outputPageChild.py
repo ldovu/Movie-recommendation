@@ -32,7 +32,7 @@ for i in range(len(listRecom)):
     
     
      
-col1, col2, col3= st.columns(3)
+col1, col2, col3= st.columns([3,3,3])
 
 
 with col1:
