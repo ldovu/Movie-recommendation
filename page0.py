@@ -1,7 +1,7 @@
 import streamlit as st
 import base64
 
-st.set_page_config(page_title="MovieTips", page_icon=":shark:")
+st.set_page_config(page_title="MovieTips", page_icon="🧊")
 
 
 def get_base64(bin_file):
