@@ -58,14 +58,14 @@ first = st.write(f'''
                                  <h1> Movie recommandation system </h1>
                                     <div class="normal-text"> 
                                         Hi! This is a movie recommandation system. It will take a few time to answer this questions  \n\n take your time and enjoy:)
-                 
-                             <div class="btn">
+                             </div></div>
+                             <div >
                                  <center>
                                         <button> Start </button>
                                      </a>
                                  </center>
-                             <div lass="btn">
-                             </div></div>
+                             <div class="btn">
+                             
                              
 
                             ''' , unsafe_allow_html=True)
