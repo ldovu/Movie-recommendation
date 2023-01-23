@@ -33,7 +33,6 @@ set_background('sfondo.png')
 tabs_font_css = """
                 <style>
                     .btn{
-                        
                         border-radius: 5px;
                       
                     }
@@ -44,30 +43,42 @@ tabs_font_css = """
                         font-family:Segoe UI;
                         
                     }
+                    .normal-text{
+                        font-size: 20px;
+                        color:white;
+                        font-family:Segoe UI;
+                    }
+                    
                 </style>
                 """
 st.write(tabs_font_css, unsafe_allow_html=True)
-
-st.write(f'''
-            <div class="header"> <h1> Movie recommandation system </h1><div>
-         ''', unsafe_allow_html=True)
 
 
 
 st.write("Hi!  \n  This is a movie recommendation system and it will take a few time to answer this questions  \n\n take your time and enjoy:)")
 first = st.write(f'''
+                             <div class="header"> 
+                                 <h1> 
+                                 Movie recommandation system 
+                                 </h1>
+                             <div class="normal-text"> 
+                                 This is a movie recommandation system. It will take a few time to answer this questions  \n\n take your time and enjoy:)
+                          
+                 
                              <div class="btn">
                                  <center>
-                                     <a href="https://ldovu-movie-recommendation-choosechildadult-abxz7g.streamlit.app/">   
                                         <button> Start </button>
                                      </a>
                                  </center>
-                             <div>
+                             </div>
+                             </div>
+                             </div>
+                             
+                             
 
                             ''' , unsafe_allow_html=True)
 
 if first:
     nav_to("https://ldovu-movie-recommendation-choosechildadult-abxz7g.streamlit.app/")
-
 
 
