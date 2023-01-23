@@ -52,6 +52,9 @@ tabs_font_css = """
                         color:white;
                         font-family:Segoe UI;
                     }
+                    p span {
+                        display: block;
+                    }
                     
                 </style>
                 """
@@ -62,7 +65,8 @@ st.write(f'''
                              <div class="header"> 
                                  <h1> Movie recommandation system </h1>
                                     <div class="normal-text"> 
-                                        This is a movie recommandation system. It will take a few time to answer this questions  \n\n take your time and enjoy:)
+                                        <p><span>Hi! This is a movie recommandation system. It will take a few time to answer this questions</span><span>Take your time and enjoy:)</span>
+                                        </p> 
                                     </div>
                              </div>
                              
