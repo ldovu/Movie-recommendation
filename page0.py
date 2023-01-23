@@ -1,7 +1,7 @@
 import streamlit as st
 import base64
 
-st.set_page_config(page_title="MovieTips", page_icon="🎬")
+st.set_page_config(page_title="MovieTips", page_icon=:clapper:)
 
 
 def get_base64(bin_file):
@@ -40,7 +40,7 @@ tabs_font_css = """
                         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
                       
                     }
-                    .h1{
+                    .header{
                         border: 1px ;
                         position: fixed;
                         color:red;
@@ -62,7 +62,7 @@ st.write(tabs_font_css, unsafe_allow_html=True)
 
 
 st.write(f'''
-                             <div class="header"> 
+                             <div class="header" > 
                                  <h1> Movie recommandation system </h1>
                                     <div class="normal-text"> 
                                         <p><span>Hi! This is a movie recommandation system. It will take a few time to answer this questions</span><span>Take your time and enjoy:)</span>
