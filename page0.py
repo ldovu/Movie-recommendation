@@ -57,9 +57,9 @@ first = st.write(f'''
                              <div class="header"> 
                                  <h1> Movie recommandation system </h1>
                                     <div class="normal-text"> 
-                                        Hi! This is a movie recommandation system. It will take a few time to answer this questions  \n\n take your time and enjoy:)
+                                        Hi! This is a movie recommandation system. It will take a few time to answer this questions. Ttake your time and enjoy:)
                              </div></div>
-                             <div >
+                             <div class="div">
                                  <center>
                                         <button> Start </button>
                                      </a>
