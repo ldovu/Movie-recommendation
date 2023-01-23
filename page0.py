@@ -54,26 +54,34 @@ tabs_font_css = """
                 """
 st.write(tabs_font_css, unsafe_allow_html=True)
 
-first = st.write(f'''
+
+st.write(f'''
                              <div class="header"> 
-                                 <h1> Movie recommandation system </h1>
-                                    <div class="normal-text"> 
-                                        Hi! This is a movie recommandation system. It will take a few time to answer this questions. Take your time and enjoy:)
-                             </div></div>
-                             <div class="div">
-                                             <center>
-                                                 <a href="https://ldovu-movie-recommendation-choosechildadult-abxz7g.streamlit.app/">
-                                                     <button> Start! </button>
-                                                 </a>
-                                             </center>
-                               <div class="btn">
+                                 <h1> 
+                                 Movie recommandation system 
+                                 </h1>
+                             <div class="normal-text"> 
+                                 This is a movie recommandation system. It will take a few time to answer this questions  \n\n take your time and enjoy:)
                              
+                             </div>
+                             </div>
                              
                              
 
                             ''' , unsafe_allow_html=True)
+                            
+chat_botton1 = st.write(f'''
+                              <div class="div">
+                                  <center>
+                                      <a href="https://ldovu-movie-recommendation-choosechildadult-abxz7g.streamlit.app/">
+                                          <button> Move to the next question </button>
+                                      </a>
+                                  </center>
+                              <div class="btn">
 
-if first:
+                             ''', unsafe_allow_html=True)
+
+if chat_botton1 :
     nav_to("https://ldovu-movie-recommendation-choosechildadult-abxz7g.streamlit.app/")
 
 
