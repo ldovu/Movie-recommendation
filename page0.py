@@ -40,7 +40,7 @@ tabs_font_css = """
                         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
                       
                     }
-                    .header{
+                    .h1{
                         border: 1px ;
                         position: fixed;
                         color:red;
