@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jan 23 11:12:02 2023
-
-@author: simonecossaro
-"""
-
 import unittest
 import MovieRecommendationSystem3 as mr
 import pandas as pd
