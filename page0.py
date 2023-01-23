@@ -57,13 +57,10 @@ st.write(tabs_font_css, unsafe_allow_html=True)
 
 st.write(f'''
                              <div class="header"> 
-                                 <h1> 
-                                 Movie recommandation system 
-                                 </h1>
-                             <div class="normal-text"> 
-                                 This is a movie recommandation system. It will take a few time to answer this questions  \n\n take your time and enjoy:)
-                             
-                             </div>
+                                 <h1> Movie recommandation system </h1>
+                                    <div class="normal-text"> 
+                                        This is a movie recommandation system. It will take a few time to answer this questions  \n\n take your time and enjoy:)
+                                    </div>
                              </div>
                              
                              
