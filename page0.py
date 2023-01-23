@@ -43,8 +43,9 @@ tabs_font_css = """
 st.write(tabs_font_css, unsafe_allow_html=True)
 
 
-
-st.title("Movie recommendation system")
+st.write(f'''
+             <b style="font-family:Georgia,serif; color:Red; font-size: 20px;"> Movie recommendation system</b>
+          ''', unsafe_allow_html=True)
 
 def nav_to(url):
     nav_script = """
