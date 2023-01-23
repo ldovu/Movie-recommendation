@@ -53,25 +53,16 @@ tabs_font_css = """
                 """
 st.write(tabs_font_css, unsafe_allow_html=True)
 
-
-
-st.write("Hi!  \n  This is a movie recommendation system and it will take a few time to answer this questions  \n\n take your time and enjoy:)")
 first = st.write(f'''
                              <div class="header"> 
-                                 <h1> 
-                                 Movie recommandation system 
-                                 </h1>
-                             <div class="normal-text"> 
-                                 This is a movie recommandation system. It will take a few time to answer this questions  \n\n take your time and enjoy:)
-                          
+                                 <h1> Movie recommandation system </h1></div>
+                             <div class="normal-text"> Hi! This is a movie recommandation system. It will take a few time to answer this questions  \n\n take your time and enjoy:)</div>
                  
                              <div class="btn">
                                  <center>
                                         <button> Start </button>
                                      </a>
                                  </center>
-                             </div>
-                             </div>
                              </div>
                              
                              
