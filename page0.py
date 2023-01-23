@@ -33,10 +33,7 @@ set_background('sfondo.png')
 tabs_font_css = """
                 <style>
                     .btn{
-                        padding: 8px 28px;
-                        background: white;
-                        display:inline-block;
-                        color: white;
+                        
                         border-radius: 5px;
                       
                     }
