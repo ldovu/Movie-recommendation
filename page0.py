@@ -1,4 +1,47 @@
 import streamlit as st
+import base64
+
+def get_base64(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+#function to set the background
+def set_background(png_file):
+    bin_str = get_base64(png_file)
+    page_bg_img = '''
+                    <style>
+                        .stApp {
+                            background-image: url("data:image/png;base64,%s");
+                            background-size: cover;
+                        }
+                    </style>
+                  ''' % (bin_str)
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+
+
+
+set_background('sfondo.png')
+
+#styling
+tabs_font_css = """
+                <style>
+                    div[class*="sttitle"] label {
+                      font-size: 20px;
+                      font-family: "Georgia, serif", monospace;
+                      text-align: Center;
+                      color: Red;
+                    }
+                    div[class*="stwrite"] label {
+                      font-size: 20px;
+                      font-family:  "Georgia, serif", monospace;
+                      text-align: Center;
+                      color: Orange;
+                    }
+                </style>
+                """
+st.write(tabs_font_css, unsafe_allow_html=True)
+
 
 
 st.title("Movie recommendation system")
