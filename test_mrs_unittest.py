@@ -64,7 +64,7 @@ class Test_forseCercavi(unittest.TestCase):
 class Test_selectMovies(unittest.TestCase):
     
     def test_selectMovies(self):
-        df = mr.selectMovies(dataset_movies,'RIDERE')
+        df = mr.selectMovies(dataset_movies,'laugh')
         pres = False
         for i in range(len(df.iloc[:,1])):
             if (df['Comedy'].iloc[i] == 0 or df['Drama'].iloc[i] == 1):
