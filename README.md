@@ -7,3 +7,5 @@
 </div>
 
 <br>
+
+The aim of this project is to design a web application based on a machine learning system for movie recommendation.
