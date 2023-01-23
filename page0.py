@@ -34,6 +34,7 @@ tabs_font_css = """
                 <style>
                     .btn{
                         border-radius: 5px;
+                        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
                       
                     }
                     .header{
@@ -57,14 +58,10 @@ first = st.write(f'''
                              <div class="header"> 
                                  <h1> Movie recommandation system </h1>
                                     <div class="normal-text"> 
-                                        Hi! This is a movie recommandation system. It will take a few time to answer this questions. Ttake your time and enjoy:)
+                                        Hi! This is a movie recommandation system. It will take a few time to answer this questions. Take your time and enjoy:)
                              </div></div>
-                             <div class="div">
-                                 <center>
-                                        <button> Start </button>
-                                     </a>
-                                 </center>
-                             <div class="btn">
+                             <center><button class="btn"><a href="https://ldovu-movie-recommendation-choosechildadult-abxz7g.streamlit.app/"> Start! </button></a></center>
+                             
                              
                              
 
