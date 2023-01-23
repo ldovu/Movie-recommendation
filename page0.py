@@ -65,7 +65,7 @@ st.write(f'''
                              <div class="header" > 
                                  <h1> Movie recommendation system </h1>
                                     <div class="normal-text"> 
-                                        <p><span>Hi! This is a movie recommandation system. It will take a few time to answer this questions</span><span>Take your time and enjoy:)</span>
+                                        <p><span>Hi! This is a movie recommendation system. It will take a few time to answer this questions</span><span>Take your time and enjoy:)</span>
                                         </p> 
                                     </div>
                              </div>
