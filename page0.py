@@ -60,7 +60,13 @@ first = st.write(f'''
                                     <div class="normal-text"> 
                                         Hi! This is a movie recommandation system. It will take a few time to answer this questions. Take your time and enjoy:)
                              </div></div>
-                             <center><button class="btn"><a href="https://ldovu-movie-recommendation-choosechildadult-abxz7g.streamlit.app/"> Start! </button></a></center>
+                             <div class="div">
+                                             <center>
+                                                 <a href="https://ldovu-movie-recommendation-choosechildadult-abxz7g.streamlit.app/">
+                                                     <button> Start! </button>
+                                                 </a>
+                                             </center>
+                               <div class="btn">
                              
                              
                              
