@@ -8,4 +8,6 @@
 
 <br>
 
+INFORMATION SYSTEMS AND SOFTWARE DESIGN (224MI) - Final project
+
 The aim of this project is to design a web application based on a machine learning system for movie recommendation.
