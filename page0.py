@@ -58,6 +58,7 @@ st.write("Hi!  \n  This is a movie recommendation system and it will take a few 
 first = st.write(f'''
                              <div class="btn">
                                  <center>
+                                     <a href="https://ldovu-movie-recommendation-choosechildadult-abxz7g.streamlit.app/">   
                                         <button> Start </button>
                                      </a>
                                  </center>
