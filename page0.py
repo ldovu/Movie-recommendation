@@ -20,45 +20,56 @@ def set_background(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
-
-set_background('sfondo.png')
-
-#styling
-tabs_font_css = """
-                <style>
-                    div[class*="sttitle"] label {
-                      font-size: 20px;
-                      font-family: "Georgia, serif", monospace;
-                      text-align: Center;
-                      color: Red;
-                    }
-                    div[class*="stwrite"] label {
-                      font-size: 20px;
-                      font-family:  "Georgia, serif", monospace;
-                      text-align: Center;
-                      color: Orange;
-                    }
-                </style>
-                """
-st.write(tabs_font_css, unsafe_allow_html=True)
-
-
-st.write(f'''
-             <b style="font-family:Georgia,serif; color:Red; font-size: 20px;"> Movie recommendation system</b>
-          ''', unsafe_allow_html=True)
-
+#redirection to
 def nav_to(url):
     nav_script = """
                     <meta http-equiv="refresh" content="0; url='%s'">
                  """ % (url)
     st.write(nav_script, unsafe_allow_html=True)
 
+set_background('sfondo.png')
 
-with st.form("Welcome box"):
-        st.write("Hi!  \n  This is a movie recommendation system and it will take a few time to answer this questions  \n\n take your time and enjoy:)")
-        first = st.form_submit_button("Start")
+#styling
+tabs_font_css = """
+                <style>
+                    .btn{
+                        padding: 8px 28px;
+                        background: white;
+                        display:inline-block;
+                        color: white;
+                        border-radius: 5px;
+                      
+                    }
+                    .header{
+                        border: 1px ;
+                        position: fixed;
+                        color:red;
+                        font-family:Segoe UI;
+                        
+                    }
+                </style>
+                """
+st.write(tabs_font_css, unsafe_allow_html=True)
+
+st.write(f'''
+            <div class="header"> <h1> Movie recommandation system </h1><div>
+         ''', unsafe_allow_html=True)
+
+
+
+st.write("Hi!  \n  This is a movie recommendation system and it will take a few time to answer this questions  \n\n take your time and enjoy:)")
+first = st.write(f'''
+                             <div class="btn">
+                                 <center>
+                                        <button> Start </button>
+                                     </a>
+                                 </center>
+                             <div>
+
+                            ''' , unsafe_allow_html=True)
 
 if first:
     nav_to("https://ldovu-movie-recommendation-choosechildadult-abxz7g.streamlit.app/")
+
 
 
