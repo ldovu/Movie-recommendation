@@ -71,6 +71,18 @@ class Time:
        
 time = Time()
 
+tabs_font_css = """
+                <style>
+                    div[class*="div"] label {
+                      
+                      border-radius: 5px;
+  
+                    }
+                </style>
+                """
+st.write(tabs_font_css, unsafe_allow_html=True)
+
+
 class InputIn:  
     def goToPage(self, mood, movie, time):
         if time =="limited":
