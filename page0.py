@@ -55,16 +55,17 @@ st.write(tabs_font_css, unsafe_allow_html=True)
 
 first = st.write(f'''
                              <div class="header"> 
-                                 <h1> Movie recommandation system </h1></div>
-                             <div class="normal-text"> Hi! This is a movie recommandation system. It will take a few time to answer this questions  \n\n take your time and enjoy:)</div>
+                                 <h1> Movie recommandation system </h1>
+                                    <div class="normal-text"> 
+                                        Hi! This is a movie recommandation system. It will take a few time to answer this questions  \n\n take your time and enjoy:)
                  
                              <div class="btn">
                                  <center>
                                         <button> Start </button>
                                      </a>
                                  </center>
-                             </div>
-                             
+                             <div lass="btn">
+                             </div></div>
                              
 
                             ''' , unsafe_allow_html=True)
