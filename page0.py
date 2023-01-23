@@ -43,14 +43,14 @@ tabs_font_css = """
                     .header{
                         border: 1px ;
                         position: fixed;
-                        color:red;
-                        font-family:Segoe UI;
+                        color: red;
+                        font-family: Segoe UI;
                         
                     }
                     .normal-text{
                         font-size: 20px;
-                        color:white;
-                        font-family:Segoe UI;
+                        color: white;
+                        font-family: Segoe UI;
                     }
                     p span {
                         display: block;
