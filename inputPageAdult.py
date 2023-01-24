@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import DatasetInspection as di
+import backend
+
 
 
 st.title('Movie recommendation system')
@@ -14,31 +16,16 @@ def nav_to(url):
     
 
 ############################  MOOD SELECTION  ############################
-#st.header("MOOD")
+st.header("MOOD")
 df= pd.DataFrame(["laugh","cry", "adrenaline", "adventure","love", "fear", "fantasy", "science fiction", "casual"])
-
-class Mood:
-    st.header("MOOD")
-    def __init__(self):
-        st.radio('Which emotion would you like to try?', df, key="asdfgh")
-
-    def returnMood(self):
-        return st.session_state.asdfgh
-        
-mood = Mood() #create an object mood
+st.radio('Which emotion would you like to try?', df, key="asdfgh")
+     
 
 ############################ MOVIE SELECTION ############################ 
-class MovieTarget:
-    def __init__(self):
-        st.header("SIMILARITY")
-        st.text_input('Which movie is similar to the one you want to watch? (*optional*)', key="zxcvbn")
+st.header("SIMILARITY")
+st.text_input('Which movie is similar to the one you want to watch? (*optional*)', key="zxcvbn")
 
-    def returnMovie(self):
-        return st.session_state.zxcvbn
-
-movie = MovieTarget()
-
-
+    
 ############################ CHECK USER INPUT ############################
 def checkInputUser(title):
     if di.checkTitolo(title) or title=="":
@@ -50,7 +37,7 @@ def checkInputUser(title):
         st.write("You might looked for: ", mystring)
 
 
-checkInputUser(movie.returnMovie())
+checkInputUser(st.session_state.zxcvbn)
 
 ############################ CHECK IF TITLE IS WRONG THEN OUTPUT A BOOLEAN VALUE ############################
 def checkInputUserBoolean(title):
@@ -61,16 +48,12 @@ def checkInputUserBoolean(title):
         return False 
 
 
-class Time:
-    def __init__(self):
-        st.header("TIME")
-        st.radio("How much time do you have?", ["infinite","limited"], key="minutes")
-        
-    def returnTime(self):
-        return st.session_state.minutes
-       
-time = Time()
 
+############################  TIME SELECTION  ############################
+st.header("TIME")
+st.radio("How much time do you have?", ["infinite","limited"], key="minutes")
+   
+############################  STYLING  #############################
 tabs_font_css = """
                 <style>
                     div[class*="div"] label {
@@ -87,6 +70,9 @@ class InputIn:
     def goToPage(self, mood, movie, time):
         if time =="limited":
             st.slider('Select maximum minutes', 0, 360, 0, key="number" )
+            encoded_mood = backend.encode_string(mood)
+            encoded_movie = backend.encode_string(movie)
+            encoded_time = backend.encode_string(st.session_state.number)
             
             if checkInputUserBoolean(movie)==False :
                     chat_botton = st.write(f'''
@@ -97,8 +83,8 @@ class InputIn:
                                          <div class="btn">
                                               
                                         ''', unsafe_allow_html=True)
-            else: 
-                    chat_botton = st.write(f'''
+            else:
+                chat_botton = st.write(f'''
                                          <div class="div">
                                              <center>
                                                  <a href="https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/?qwerty=%s/?asdfgh=%s/?zxcvbn=%s/?time=%s">
@@ -107,7 +93,7 @@ class InputIn:
                                              </center>
                                          <div class="btn">
                                               
-                                        ''' % (False, mood, movie, st.session_state.number), unsafe_allow_html=True)
+                                        ''' % (False, encoded_mood, encoded_movie, encoded_time), unsafe_allow_html=True)
         else: 
             if checkInputUserBoolean(movie)==False :
                     chat_botton = st.write(f'''
@@ -128,34 +114,13 @@ class InputIn:
                                              </center>
                                          <div class="btn">
                                               
-                                        ''' % (False, mood, movie, 600), unsafe_allow_html=True)
+                                        ''' % (False,encoded_mood, encoded_movie , 600), unsafe_allow_html=True)
         
         if chat_botton :
                     nav_to("https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/")
                
   
 inputs = InputIn()
-inputs.goToPage(mood.returnMood(), movie.returnMovie(), time.returnTime())
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+inputs.goToPage(st.session_state.asdfgh, st.session_state.zxcvbn, st.session_state.minutes)
 
 
