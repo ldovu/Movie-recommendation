@@ -17,15 +17,8 @@ def nav_to(url):
 
 ############################ MOVIE SELECTION ############################ 
 st.header("SIMILARITY")
+st.text_input('Which movie is similar to the one you want to watch? (optional)', key="zxcvbn")
 
-class MovieTarget:
-    def __init__(self):
-        st.text_input('Which movie is similar to the one you want to watch? (optional)', key="zxcvbn")
-
-    def returnMovie(self):
-        return st.session_state.zxcvbn
-
-movie = MovieTarget()
 
 ############################ CHECK IF TITLE IS WRONG THEN RECOMMEND THE CORRECT ONE ############################
 def checkInputUser(title):
@@ -38,7 +31,8 @@ def checkInputUser(title):
         st.write("You might looked for: ", mystring)
 
 
-checkInputUser(movie.returnMovie())
+checkInputUser(st.session_state.zxcvbn)
+
 
 ############################ CHECK IF TITLE IS WRONG THEN OUTPUT A BOOLEAN VALUE ############################
 def checkInputUserBoolean(title):
@@ -50,16 +44,10 @@ def checkInputUserBoolean(title):
 
 ############################  TIME SELECTION  ############################ 
 st.header("TIME")
-
-class Time:
-    def __init__(self):
-        st.radio("How much time do you have?", ["infinite","limited"], key="minutes")
-        
-    def returnTime(self):
-        return st.session_state.minutes
-       
-time = Time()
-
+st.radio("How much time do you have?", ["infinite","limited"], key="minutes")
+  
+  
+############################ MAIN FUNCTION ############################
 def goToPage(movie, time):
         if time == "limited":
             st.slider('Select maximum minutes', 0, 360, 0, key="number")
@@ -113,6 +101,6 @@ def goToPage(movie, time):
                     nav_to("https://ldovu-movie-recommendation-outputpagechild-qi8pl4.streamlit.app/") 
     
                 
-goToPage(movie.returnMovie(), time.returnTime())
+goToPage(st.session_state.zxcvbn,  st.session_state.minutes)
 
 
