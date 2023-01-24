@@ -70,9 +70,6 @@ class InputIn:
     def goToPage(self, mood, movie, time):
         if time =="limited":
             st.slider('Select maximum minutes', 0, 360, 0, key="number" )
-            encoded_mood = backend.encode_string(mood)
-            encoded_movie = backend.encode_string(movie)
-            encoded_time = backend.encode_string(st.session_state.number)
             
             if checkInputUserBoolean(movie)==False :
                     chat_botton = st.write(f'''
@@ -93,7 +90,7 @@ class InputIn:
                                              </center>
                                          <div class="btn">
                                               
-                                        ''' % (False, encoded_mood, encoded_movie, encoded_time), unsafe_allow_html=True)
+                                        ''' % (False, mood, movie, time), unsafe_allow_html=True)
         else: 
             if checkInputUserBoolean(movie)==False :
                     chat_botton = st.write(f'''
@@ -114,13 +111,23 @@ class InputIn:
                                              </center>
                                          <div class="btn">
                                               
-                                        ''' % (False,encoded_mood, encoded_movie , 600), unsafe_allow_html=True)
+                                        ''' % (False,mood, movie , 600), unsafe_allow_html=True)
         
         if chat_botton :
                     nav_to("https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/")
                
-  
+
+encoded_mood = backend.encode_string(st.session_state.asdfgh)
+encoded_movie = backend.encode_string(st.session_state.zxcvbn)
+encoded_time = backend.encode_string( st.session_state.minutes)
+
 inputs = InputIn()
-inputs.goToPage(st.session_state.asdfgh, st.session_state.zxcvbn, st.session_state.minutes)
+inputs.goToPage(encoded_mood , encoded_movie ,encoded_time )
+
+
+
+
+
+
 
 
