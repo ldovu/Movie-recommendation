@@ -60,8 +60,7 @@ class Time:
        
 time = Time()
 
-class InputIn:
-    def goToPage(self, movie, time):
+def goToPage(movie, time):
         if time == "limited":
             st.slider('Select maximum minutes', 0, 360, 0, key="number")
                 
@@ -114,7 +113,6 @@ class InputIn:
                     nav_to("https://ldovu-movie-recommendation-outputpagechild-qi8pl4.streamlit.app/") 
     
                 
-inputs = InputIn()
-inputs.goToPage(movie.returnMovie(), time.returnTime())
+goToPage(movie.returnMovie(), time.returnTime())
 
 
