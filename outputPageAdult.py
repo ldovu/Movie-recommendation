@@ -11,10 +11,10 @@ values = st.experimental_get_query_params()["qwerty"][0]
 
 list1 = values.split('/?')
 
-child = backend.decode_string(list1[0].replace("qwerty=", ""))
-mood = backend.decode_string(list1[1].replace("asdfgh=", ""))
-film_target = backend.decode_string(list1[2].replace("zxcvbn=", "").replace("%20", " "))
-time =backend.decode_string(list1[3].replace("time=", ""))
+child = list1[0].replace("qwerty=", "")
+mood = list1[1].replace("asdfgh=", "")
+film_target = list1[2].replace("zxcvbn=", "").replace("%20", " ")
+time = list1[3].replace("time=", "")
 
 for_kids = False
 Tmax = int(time)
