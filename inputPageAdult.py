@@ -62,9 +62,8 @@ tabs_font_css = """
                 """
 st.write(tabs_font_css, unsafe_allow_html=True)
 
-
-class InputIn:  
-    def goToPage(self, mood, movie, time):
+############################ MAIN FUNCTION ############################
+def goToPage(self, mood, movie, time):
         if time =="limited":
             st.slider('Select maximum minutes', 0, 360, 0, key="number" )
             
@@ -114,8 +113,8 @@ class InputIn:
                     nav_to("https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/")
                
 
-inputs = InputIn()
-inputs.goToPage(st.session_state.asdfgh, st.session_state.zxcvbn , st.session_state.minutes )
+
+goToPage(st.session_state.asdfgh, st.session_state.zxcvbn , st.session_state.minutes )
 
 
 
