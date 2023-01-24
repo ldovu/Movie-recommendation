@@ -3,17 +3,18 @@ import pandas as pd
 import MovieRecommendationSystem as mrs
 import numpy as np
 import DatasetInspection as di
-
+import backend
 
 #get query parameters
 values = st.experimental_get_query_params()["qwerty"][0]
 
+
 list1 = values.split('/?')
 
-child = list1[0].replace("qwerty=", "")
-mood = list1[1].replace("asdfgh=", "")
-film_target = list1[2].replace("zxcvbn=", "").replace("%20", " ")
-time =list1[3].replace("time=", "")
+child = backend.decode_string(list1[0].replace("qwerty=", ""))
+mood = backend.decode_string(list1[1].replace("asdfgh=", ""))
+film_target = backend.decode_string(list1[2].replace("zxcvbn=", "").replace("%20", " "))
+time =backend.decode_string(list1[3].replace("time=", ""))
 
 for_kids = False
 Tmax = int(time)
