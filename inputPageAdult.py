@@ -63,7 +63,7 @@ tabs_font_css = """
 st.write(tabs_font_css, unsafe_allow_html=True)
 
 ############################ MAIN FUNCTION ############################
-def goToPage(self, mood, movie, time):
+def goToPage(mood, movie, time):
         if time =="limited":
             st.slider('Select maximum minutes', 0, 360, 0, key="number" )
             
@@ -115,33 +115,5 @@ def goToPage(self, mood, movie, time):
 
 
 goToPage(st.session_state.asdfgh, st.session_state.zxcvbn , st.session_state.minutes )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
