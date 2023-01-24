@@ -1,9 +1,6 @@
 import streamlit as st
 import pandas as pd
 import DatasetInspection as di
-import backend
-
-
 
 st.title('Movie recommendation system')
 
@@ -117,12 +114,30 @@ class InputIn:
                     nav_to("https://ldovu-movie-recommendation-outputpageadult-45fjq9.streamlit.app/")
                
 
-encoded_mood = backend.encode_string(st.session_state.asdfgh)
-encoded_movie = backend.encode_string(st.session_state.zxcvbn)
-encoded_time = backend.encode_string( st.session_state.minutes)
-
 inputs = InputIn()
-inputs.goToPage(encoded_mood , encoded_movie ,encoded_time )
+inputs.goToPage(st.session_state.asdfgh, st.session_state.zxcvbn , st.session_state.minutes )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
