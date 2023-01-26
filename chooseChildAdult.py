@@ -1,18 +1,7 @@
 import streamlit as st
 #styling
 tabs_font_css = """
-                <style>
-                    .btn{
-                        border-radius: 5px;
-                        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-                      
-                    }
-                    .normal-text{
-                        font-size: 20px;
-                        color: #22333b;
-                        font-family: Segoe UI;
-                      }
-                    
+                <style>                    
                     h2 {
                       color: #0a0908;
                       }
