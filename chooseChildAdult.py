@@ -29,7 +29,7 @@ def nav_to(url):
     st.write(nav_script, unsafe_allow_html=True)
 
 
-col1, col2, col3 = st.columns([1, 10 ,1])
+col1, col2, col3 = st.columns([1, 15 ,1])
 with col2:
     st.write(f'''
                  <h1> Movie recommendation system </h1><h2> Let's start with your age </h2>
