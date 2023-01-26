@@ -6,6 +6,7 @@ from Levenshtein import distance
 dataset_movies = pd.read_csv('movies_dataset_overview.csv')
 
 ###########################################################
+# verify that the title entered exists and is present in the dataset
 
 def checkTitolo(titolo):
         for i in range(len(dataset_movies['original_title'])):
@@ -14,6 +15,7 @@ def checkTitolo(titolo):
         return False
 
 ###########################################################
+# function that suggests titles similar to the wrong one entered
 
 def forseCercavi(film):
         lista = []
@@ -25,6 +27,7 @@ def forseCercavi(film):
         return lista[:3]
     
 ###########################################################
+# returns the movie plot
 
 def trovaOverview(film):
     for i in range(len(dataset_movies['original_title'])):
