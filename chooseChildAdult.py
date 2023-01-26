@@ -43,7 +43,7 @@ with col2:
         chat_botton1 = st.write(f'''
                                      <div class="div">
                                          <center>
-                                             <a href="https://ldovu-movie-recommendation-inputpageadult-ksx813.streamlit.app/?qwerty=%s">
+                                             <a href="https://ldovu-movie-recommendation-inputpageadult-n5m4a8.streamlit.app/?qwerty=%s">
                                                  <button> Move on </button>
                                              </a>
                                          </center>
@@ -51,12 +51,12 @@ with col2:
 
                                     ''' % (False), unsafe_allow_html=True)
         if chat_botton1 :
-                nav_to("https://ldovu-movie-recommendation-inputpageadult-ksx813.streamlit.app/")
+                nav_to("https://ldovu-movie-recommendation-inputpageadult-n5m4a8.streamlit.app/")
     elif st.session_state.qwerty == "child" :
         chat_botton2 = st.write(f'''
                                      <div class="div">
                                          <center>
-                                             <a href="https://ldovu-movie-recommendation-inputpagechild-2jx062.streamlit.app/?qwerty=%s">
+                                             <a href="https://ldovu-movie-recommendation-inputpagechild-wi5a4y.streamlit.app/?qwerty=%s">
                                                  <button> Move on </button>
                                              </a>
                                          </center>
@@ -64,7 +64,7 @@ with col2:
 
                                     ''' % (True), unsafe_allow_html=True)
         if chat_botton2 :
-                nav_to("https://ldovu-movie-recommendation-inputpagechild-2jx062.streamlit.app/")
+                nav_to("https://ldovu-movie-recommendation-inputpagechild-wi5a4y.streamlit.app/")
                 
                
 
