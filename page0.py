@@ -49,7 +49,7 @@ st.write(f'''
                              
 
                             ''' , unsafe_allow_html=True)
-for i in range(1,5):
+for i in range(1,3):
     st.write("") 
 
 chat_botton1 = st.write(f'''
