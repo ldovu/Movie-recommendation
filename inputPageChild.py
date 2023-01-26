@@ -70,61 +70,61 @@ with col2:
                ''' , unsafe_allow_html=True)
   st.radio("How much time do you have?", ["infinite","limited"], key="minutes")
 
-  
-############################ MAIN FUNCTION ############################
-def goToPage(movie, time):
-        if time == "limited":
-            st.slider('Select maximum minutes', 0, 360, 0, key="number")
-                
-            if checkInputUserBoolean(movie)==False :
-                    chat_botton = st.write(f'''
-                                         <div class="div">
-                                             <center>
-                                                     <button  disabled="disabled"> Go to prediction movies </button>
-                                             </center>
-                                         <div class="btn">
-                                              
-                                        ''', unsafe_allow_html=True)
-            else: 
-                chat_botton = st.write(f'''
-                                         <div class="div">
-                                             <center>
-                                                 <a href="https://ldovu-movie-recommendation-outputpagechild-qi8pl4.streamlit.app/?qwerty=%s/?zxcvbn=%s/?time=%s">
-                                                     <button> Go to prediction movies </button>
-                                                 </a>
-                                             </center>
-                                         <div class="btn">
-                                              
-                                        ''' % (True , movie, st.session_state.number), unsafe_allow_html=True)
-            if chat_botton :
-                nav_to("https://ldovu-movie-recommendation-outputpagechild-qi8pl4.streamlit.app/")
-               
-        
-        else:
-            if checkInputUserBoolean(movie)==False :
-                    chat_botton = st.write(f'''
-                                         <div class="div">
-                                             <center>
-                                                     <button  disabled="disabled"> Go to prediction movies </button>
-                                             </center>
-                                         <div class="btn">
-                                              
-                                        ''', unsafe_allow_html=True)
-            else: 
-                chat_botton = st.write(f'''
-                                         <div class="div">
-                                             <center>
-                                                 <a href="https://ldovu-movie-recommendation-outputpagechild-qi8pl4.streamlit.app/?qwerty=%s/?zxcvbn=%s/?time=%s">
-                                                     <button> Go to prediction movies </button>
-                                                 </a>
-                                             </center>
-                                         <div class="btn">
-                                              
-                                        ''' % (True, movie, 600), unsafe_allow_html=True)
-            if chat_botton :
-                    nav_to("https://ldovu-movie-recommendation-outputpagechild-qi8pl4.streamlit.app/") 
-    
-                
-goToPage(st.session_state.zxcvbn,  st.session_state.minutes)
+
+  ############################ MAIN FUNCTION ############################
+  def goToPage(movie, time):
+          if time == "limited":
+              st.slider('Select maximum minutes', 0, 360, 0, key="number")
+
+              if checkInputUserBoolean(movie)==False :
+                      chat_botton = st.write(f'''
+                                           <div class="div">
+                                               <center>
+                                                       <button  disabled="disabled"> Go to prediction movies </button>
+                                               </center>
+                                           <div class="btn">
+
+                                          ''', unsafe_allow_html=True)
+              else: 
+                  chat_botton = st.write(f'''
+                                           <div class="div">
+                                               <center>
+                                                   <a href="https://ldovu-movie-recommendation-outputpagechild-qi8pl4.streamlit.app/?qwerty=%s/?zxcvbn=%s/?time=%s">
+                                                       <button> Go to prediction movies </button>
+                                                   </a>
+                                               </center>
+                                           <div class="btn">
+
+                                          ''' % (True , movie, st.session_state.number), unsafe_allow_html=True)
+              if chat_botton :
+                  nav_to("https://ldovu-movie-recommendation-outputpagechild-qi8pl4.streamlit.app/")
+
+
+          else:
+              if checkInputUserBoolean(movie)==False :
+                      chat_botton = st.write(f'''
+                                           <div class="div">
+                                               <center>
+                                                       <button  disabled="disabled"> Go to prediction movies </button>
+                                               </center>
+                                           <div class="btn">
+
+                                          ''', unsafe_allow_html=True)
+              else: 
+                  chat_botton = st.write(f'''
+                                           <div class="div">
+                                               <center>
+                                                   <a href="https://ldovu-movie-recommendation-outputpagechild-qi8pl4.streamlit.app/?qwerty=%s/?zxcvbn=%s/?time=%s">
+                                                       <button> Go to prediction movies </button>
+                                                   </a>
+                                               </center>
+                                           <div class="btn">
+
+                                          ''' % (True, movie, 600), unsafe_allow_html=True)
+              if chat_botton :
+                      nav_to("https://ldovu-movie-recommendation-outputpagechild-qi8pl4.streamlit.app/") 
+
+
+  goToPage(st.session_state.zxcvbn,  st.session_state.minutes)
 
 
