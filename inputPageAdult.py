@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import DatasetInspection as di
 
-st.title('Movie recommendation system')
 
 ############################# REDIRECT TO PAGE  ############################
 def nav_to(url):
@@ -14,14 +13,18 @@ def nav_to(url):
 
 ############################# STYLING #############################
 tabs_font_css = """
-                <style> 
+                <style>
                     .btn{
                         border-radius: 5px;
                         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
                       
                     }
+                    
                     h2 {
                       color: #0a0908;
+                    }
+                    h1 {
+                      color: #002642;
                       }
                     
                     
@@ -31,7 +34,7 @@ st.write(tabs_font_css, unsafe_allow_html=True)
 
 ############################  MOOD SELECTION  ############################
 st.write(f'''
-                 <h2> MOOD </h2>
+                 <h1> Movie recommendation system </h1><h2> MOOD </h2>
              ''' , unsafe_allow_html=True)
 df= pd.DataFrame(["laugh","cry", "adrenaline", "adventure","love", "fear", "fantasy", "science fiction", "casual"])
 st.radio('Which emotion would you like to try?', df, key="asdfgh")
