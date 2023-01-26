@@ -75,6 +75,5 @@ with col2:
                                                      listRecom[7],listRecom[8],listRecom[9]))
     st.write(di.trovaOverview(option))
 
-
         
        
