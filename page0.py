@@ -38,30 +38,33 @@ tabs_font_css = """
 st.write(tabs_font_css, unsafe_allow_html=True)
 
 
-st.write(f'''
-                             <h1> Movie recommendation App </h1>
-                                <div class="normal-text">
-                                    <p><span>Hi! </span> <span>This is a movie recommendation system. It will take few time to answer these questions.</span><span>Take your time and enjoy:)</span>
-                                    </p> 
-                                </div>
-                             
-                             
-                             
+col1, col2, col3 = st.columns([1, 15 ,1])
+with col2:
 
-                            ''' , unsafe_allow_html=True)
-for i in range(1,3):
-    st.write("") 
+    st.write(f'''
+                                 <h1> Movie recommendation App </h1>
+                                    <div class="normal-text">
+                                        <p><span>Hi! </span> <span>This is a movie recommendation system. It will take few time to answer these questions.</span><span>Take your time and enjoy:)</span>
+                                        </p> 
+                                    </div>
 
-chat_botton1 = st.write(f'''
-                              <div class="div">
-                                  <center>
-                                      <a href="https://ldovu-movie-recommendation-choosechildadult-abxz7g.streamlit.app/">
-                                          <button> Start! </button>
-                                      </a>
-                                  </center>
-                              <div class="btn">
 
-                             ''', unsafe_allow_html=True)
 
-if chat_botton1 :
-    nav_to("https://ldovu-movie-recommendation-choosechildadult-abxz7g.streamlit.app/")
+
+                                ''' , unsafe_allow_html=True)
+    for i in range(1,3):
+        st.write("") 
+
+    chat_botton1 = st.write(f'''
+                                  <div class="div">
+                                      <center>
+                                          <a href="https://ldovu-movie-recommendation-choosechildadult-abxz7g.streamlit.app/">
+                                              <button> Start! </button>
+                                          </a>
+                                      </center>
+                                  <div class="btn">
+
+                                 ''', unsafe_allow_html=True)
+
+    if chat_botton1 :
+        nav_to("https://ldovu-movie-recommendation-choosechildadult-abxz7g.streamlit.app/")
