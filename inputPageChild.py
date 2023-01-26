@@ -34,41 +34,42 @@ def nav_to(url):
                  """ % (url)
     st.write(nav_script, unsafe_allow_html=True)
     
-
-############################ MOVIE SELECTION ############################ 
-st.write(f'''
-                 <h1> Movie recommendation app </h1><h2> SIMILARITY </h2>
-             ''' , unsafe_allow_html=True)
-st.text_input('Which movie is similar to the one you want to watch? (optional)', key="zxcvbn")
-
-
-############################ CHECK IF TITLE IS WRONG THEN RECOMMEND THE CORRECT ONE ############################
-def checkInputUser(title):
-    if di.checkTitolo(title) or title=="":
-        st.write("You  would like to see a movie similar to ", title)
-    else:
-        
-        mystring = ", ".join(di.forseCercavi(title))
-          
-        st.write("You might looked for: ", mystring)
+col1, col2, col3 = st.columns([1, 15 ,1])
+with col2:
+  ############################ MOVIE SELECTION ############################ 
+  st.write(f'''
+                   <h1> Movie recommendation App </h1><h2> SIMILARITY </h2>
+               ''' , unsafe_allow_html=True)
+  st.text_input('Which movie is similar to the one you want to watch? (optional)', key="zxcvbn")
 
 
-checkInputUser(st.session_state.zxcvbn)
+  ############################ CHECK IF TITLE IS WRONG THEN RECOMMEND THE CORRECT ONE ############################
+  def checkInputUser(title):
+      if di.checkTitolo(title) or title=="":
+          st.write("You  would like to see a movie similar to: ", title)
+      else:
+
+          mystring = ", ".join(di.forseCercavi(title))
+
+          st.write(":warning: Incorrect title! You might looked for: ", mystring)
 
 
-############################ CHECK IF TITLE IS WRONG THEN OUTPUT A BOOLEAN VALUE ############################
-def checkInputUserBoolean(title):
-    if di.checkTitolo(title) or title=="":
-        return True
-    else:
-        return False 
+  checkInputUser(st.session_state.zxcvbn)
 
-############################  TIME SELECTION  ############################ 
-st.write(f'''
-                 <h1> Movie recommendation app </h1><h2> TIME </h2>
-             ''' , unsafe_allow_html=True)
-st.radio("How much time do you have?", ["infinite","limited"], key="minutes")
-  
+
+  ############################ CHECK IF TITLE IS WRONG THEN OUTPUT A BOOLEAN VALUE ############################
+  def checkInputUserBoolean(title):
+      if di.checkTitolo(title) or title=="":
+          return True
+      else:
+          return False 
+
+  ############################  TIME SELECTION  ############################ 
+  st.write(f'''
+                   <h2> TIME </h2>
+               ''' , unsafe_allow_html=True)
+  st.radio("How much time do you have?", ["infinite","limited"], key="minutes")
+
   
 ############################ MAIN FUNCTION ############################
 def goToPage(movie, time):
