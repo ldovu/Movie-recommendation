@@ -49,8 +49,6 @@ listRecom = recommended['title'].values
 
 listOverview = []
 
-
-############################  MOOD SELECTION  ############################
 st.write(f'''
                  <h1> Movie recommendation App </h1><h2> Recommended movies: </h2>
              ''' , unsafe_allow_html=True)
