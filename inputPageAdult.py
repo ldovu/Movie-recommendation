@@ -32,49 +32,52 @@ tabs_font_css = """
                 """
 st.write(tabs_font_css, unsafe_allow_html=True)
 
-############################  MOOD SELECTION  ############################
-st.write(f'''
-                 <h1> Movie recommendation app </h1><h2> MOOD </h2>
-             ''' , unsafe_allow_html=True)
-df= pd.DataFrame(["laugh","cry", "adrenaline", "adventure","love", "fear", "fantasy", "science fiction", "casual"])
-st.radio('Which emotion would you like to try?', df, key="asdfgh")
-     
 
-############################ MOVIE SELECTION ############################ 
-st.write(f'''
-                 <h2> SIMILARITY </h2>
-             ''' , unsafe_allow_html=True)
-st.text_input('Which movie is similar to the one you want to watch? (*optional*)', key="zxcvbn")
-
-    
-############################ CHECK USER INPUT ############################
-def checkInputUser(title):
-    if di.checkTitolo(title) or title=="":
-        st.write("You  would like to see a movie similar to: ", title)
-    else:
-        
-        mystring = ", ".join(di.forseCercavi(title))
-          
-        st.write("Incorrect title! You might looked for: ", mystring)
+col1, col2, col3 = st.columns([1, 15 ,1])
+with col2:
+    ############################  MOOD SELECTION  ############################
+    st.write(f'''
+                     <h1> Movie recommendation app </h1><h2> MOOD </h2>
+                 ''' , unsafe_allow_html=True)
+    df= pd.DataFrame(["laugh","cry", "adrenaline", "adventure","love", "fear", "fantasy", "science fiction", "casual"])
+    st.radio('Which emotion would you like to try?', df, key="asdfgh")
 
 
-checkInputUser(st.session_state.zxcvbn)
-
-############################ CHECK IF TITLE IS WRONG THEN OUTPUT A BOOLEAN VALUE ############################
-def checkInputUserBoolean(title):
-    if di.checkTitolo(title) or title=="":
-        return True
-    else: 
-        return False 
+    ############################ MOVIE SELECTION ############################ 
+    st.write(f'''
+                     <h2> SIMILARITY </h2>
+                 ''' , unsafe_allow_html=True)
+    st.text_input('Which movie is similar to the one you want to watch? (*optional*)', key="zxcvbn")
 
 
+    ############################ CHECK USER INPUT ############################
+    def checkInputUser(title):
+        if di.checkTitolo(title) or title=="":
+            st.write("You  would like to see a movie similar to: ", title)
+        else:
 
-############################  TIME SELECTION  ############################
-st.write(f'''
-                 <h2> TIME </h2>
-             ''' , unsafe_allow_html=True)
-st.radio("How much time do you have?", ["infinite","limited"], key="minutes")
-   
+            mystring = ", ".join(di.forseCercavi(title))
+
+            st.write("Incorrect title! You might looked for: ", mystring)
+
+
+    checkInputUser(st.session_state.zxcvbn)
+
+    ############################ CHECK IF TITLE IS WRONG THEN OUTPUT A BOOLEAN VALUE ############################
+    def checkInputUserBoolean(title):
+        if di.checkTitolo(title) or title=="":
+            return True
+        else: 
+            return False 
+
+
+
+    ############################  TIME SELECTION  ############################
+    st.write(f'''
+                     <h2> TIME </h2>
+                 ''' , unsafe_allow_html=True)
+    st.radio("How much time do you have?", ["infinite","limited"], key="minutes")
+
 ############################ MAIN FUNCTION ############################
 def goToPage(mood, movie, time):
         if time =="limited":
