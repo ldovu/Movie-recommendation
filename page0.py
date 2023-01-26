@@ -30,7 +30,7 @@ def nav_to(url):
                  """ % (url)
     st.write(nav_script, unsafe_allow_html=True)
 
-#set_background('sfondo.png')
+set_background('sfondo.png')
 
 #styling
 tabs_font_css = """
