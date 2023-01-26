@@ -4,7 +4,27 @@ import pandas as pd
 import numpy as np
 import DatasetInspection as di
 
-st.title('Movie recommendation system')
+
+############################# STYLING #############################
+tabs_font_css = """
+                <style>
+                    .btn{
+                        border-radius: 5px;
+                        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+                      
+                    }
+                    
+                    h2 {
+                      color: #002642;
+                    }
+                    h1 {
+                      color: #0a0908;
+                      }
+                    
+                    
+                </style>
+                """
+st.write(tabs_font_css, unsafe_allow_html=True)
 
 
 ############################# REDIRECT TO PAGE 2 #####################
@@ -16,7 +36,9 @@ def nav_to(url):
     
 
 ############################ MOVIE SELECTION ############################ 
-st.header("SIMILARITY")
+st.write(f'''
+                 <h1> Movie recommendation app </h1><h2> SIMILARITY </h2>
+             ''' , unsafe_allow_html=True)
 st.text_input('Which movie is similar to the one you want to watch? (optional)', key="zxcvbn")
 
 
@@ -38,12 +60,13 @@ checkInputUser(st.session_state.zxcvbn)
 def checkInputUserBoolean(title):
     if di.checkTitolo(title) or title=="":
         return True
-    else: 
-        #st.error("Incorrect title movie")
+    else:
         return False 
 
 ############################  TIME SELECTION  ############################ 
-st.header("TIME")
+st.write(f'''
+                 <h1> Movie recommendation app </h1><h2> TIME </h2>
+             ''' , unsafe_allow_html=True)
 st.radio("How much time do you have?", ["infinite","limited"], key="minutes")
   
   
