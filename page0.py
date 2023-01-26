@@ -21,8 +21,8 @@ tabs_font_css = """
                     }
                     .normal-text{
                         font-size: 20px;
-                        color: #22333b;
-                        font-family: Segoe UI;
+                        color: #002642;
+                        
                       }
                     
                     h1 {
