@@ -58,7 +58,7 @@ with col2:
 
             mystring = ", ".join(di.forseCercavi(title))
 
-            st.write("Incorrect title! You might looked for: ", mystring)
+            st.write(":warning: Incorrect title! You might looked for: ", mystring)
 
 
     checkInputUser(st.session_state.zxcvbn)
