@@ -1,5 +1,7 @@
 import streamlit as st
 
+st.set_page_config(page_title="Movie recommendation")
+
 ############################# STYLING #############################
 tabs_font_css = """
                 <style>
@@ -28,7 +30,7 @@ def nav_to(url):
                  """ % (url)
     st.write(nav_script, unsafe_allow_html=True)
 
-
+############################ SELECTION USER'S AGE ############################
 col1, col2, col3 = st.columns([1, 15 ,1])
 with col2:
     st.write(f'''
