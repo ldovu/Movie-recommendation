@@ -10,7 +10,6 @@ def nav_to(url):
                  """ % (url)
     st.write(nav_script, unsafe_allow_html=True)
 
-
 #styling
 tabs_font_css = """
                 <style>
