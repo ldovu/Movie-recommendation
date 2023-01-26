@@ -4,6 +4,28 @@ import MovieRecommendationSystem as mrs
 import numpy as np
 import DatasetInspection as di
 
+############################# STYLING #############################
+tabs_font_css = """
+                <style>
+                    .btn{
+                        border-radius: 5px;
+                        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+                      
+                    }
+                    
+                    h2 {
+                      color: #002642;
+                    }
+                    h1 {
+                      color: #0a0908;
+                      }
+                    
+                    
+                </style>
+                """
+st.write(tabs_font_css, unsafe_allow_html=True)
+
+
 #get query parameters
 values = st.experimental_get_query_params()["qwerty"][0]
 
@@ -26,8 +48,9 @@ listRecom = recommended['title'].values
 
 listOverview = []
 
-st.header("Recommended movies:")
-
+st.write(f'''
+                 <h1> Movie recommendation App </h1><h2> Recommended movies: </h2>
+             ''' , unsafe_allow_html=True)
 
 for i in range(len(listRecom)):
     value = di.trovaOverview(listRecom[i])
