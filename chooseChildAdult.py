@@ -31,7 +31,7 @@ with col2:
                              
                             ''' , unsafe_allow_html=True)
 
-    st.radio( "Are you an adult o a child?" , ["adult", "child"], key="qwerty")
+    st.radio( "Are you an adult or a child?" , ["adult", "child"], key="qwerty")
     
     if st.session_state.qwerty == "adult":
         chat_botton1 = st.write(f'''
