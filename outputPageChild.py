@@ -63,7 +63,7 @@ col1, col2 = st.columns(2)
 with col1:
     for i in range(0,10):
            st.write(f'''
-                <div > <big><b>%d- %s </b></big>
+                <div > <big><b>%d - </b> %s</big>
                 </div>
                 ''' % (i+1, listRecom[i]), unsafe_allow_html=True)
 
