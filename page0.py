@@ -43,7 +43,7 @@ tabs_font_css = """
                     
                     .normal-text{
                         font-size: 20px;
-                        color: black;
+                        color: white;
                         font-family: Segoe UI;
                     }
                     p span {
