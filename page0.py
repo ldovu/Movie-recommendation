@@ -40,7 +40,7 @@ tabs_font_css = """
                         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
                       
                     }
-                    .header{
+                    h1 {
                       color: red;
                     }
                     
@@ -59,13 +59,12 @@ st.write(tabs_font_css, unsafe_allow_html=True)
 
 
 st.write(f'''
-                             <div class="header"> 
-                                 <h1> Movie recommendation system </h1>
-                                    <div class="normal-text">
-                                        <p><span>Hi! This is a movie recommendation system. It will take a few time to answer this questions</span><span>Take your time and enjoy:)</span>
-                                        </p> 
-                                    </div>
-                             </div>
+                             <h1> Movie recommendation system </h1>
+                                <div class="normal-text">
+                                    <p><span>Hi! This is a movie recommendation system. It will take a few time to answer this questions</span><span>Take your time and enjoy:)</span>
+                                    </p> 
+                                </div>
+                             
                              
                              
 
