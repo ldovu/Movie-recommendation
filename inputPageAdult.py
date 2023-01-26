@@ -34,7 +34,7 @@ st.write(tabs_font_css, unsafe_allow_html=True)
 
 ############################  MOOD SELECTION  ############################
 st.write(f'''
-                 <h1> Movie recommendation system </h1><h2> MOOD </h2>
+                 <h1> Movie recommendation app </h1><h2> MOOD </h2>
              ''' , unsafe_allow_html=True)
 df= pd.DataFrame(["laugh","cry", "adrenaline", "adventure","love", "fear", "fantasy", "science fiction", "casual"])
 st.radio('Which emotion would you like to try?', df, key="asdfgh")
