@@ -1,13 +1,18 @@
 import streamlit as st
-#styling
+
+############################# STYLING #############################
 tabs_font_css = """
-                <style> 
+                <style>
                     .btn{
                         border-radius: 5px;
                         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
                       
                     }
+                    
                     h2 {
+                      color: #002642;
+                    }
+                    h1 {
                       color: #0a0908;
                       }
                     
@@ -16,6 +21,7 @@ tabs_font_css = """
                 """
 st.write(tabs_font_css, unsafe_allow_html=True)
 
+############################  REDIRECTION FUNCTION  ############################
 def nav_to(url):
     nav_script = """
                     <meta http-equiv="refresh" content="0; url='%s'">
@@ -26,10 +32,8 @@ def nav_to(url):
 col1, col2, col3 = st.columns([1, 6 ,1])
 with col2:
     st.write(f'''
-                             <h2> Let's start with your age </h2>
-                                
-                             
-                            ''' , unsafe_allow_html=True)
+                 <h1> Movie recommendation system </h1><h2> Let's start with your age </h2>
+             ''' , unsafe_allow_html=True)
 
     st.radio( "Are you an adult or a child?" , ["adult", "child"], key="qwerty")
     
