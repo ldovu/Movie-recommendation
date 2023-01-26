@@ -41,7 +41,7 @@ st.write(tabs_font_css, unsafe_allow_html=True)
 st.write(f'''
                              <h1> Movie recommendation system </h1>
                                 <div class="normal-text">
-                                    <p><span>Hi! This is a movie recommendation system. It will take a few time to answer this questions</span><span>Take your time and enjoy:)</span>
+                                    <p><span>Hi! </span> <span>This is a movie recommendation system. It will take few time to answer this questions</span><span>Take your time and enjoy:)</span>
                                     </p> 
                                 </div>
                              
