@@ -3,7 +3,6 @@ import pandas as pd
 import MovieRecommendationSystem as mrs
 import numpy as np
 import DatasetInspection as di
-import backend
 
 st.set_page_config(page_title="Movie recommendation")
 
