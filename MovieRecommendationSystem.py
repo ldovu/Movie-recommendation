@@ -5,7 +5,8 @@ from tqdm import tqdm
 from Levenshtein import distance
 
 dataset_movies = pd.read_csv('movies_dataset_overview.csv')
-
+# il dataset è quello ottenuto dopo il preprocessing
+# per maggiori informazioni: https://colab.research.google.com/drive/1chPt-SJ3CT5nDLnHFXfZ3LpymwuLsF5t#scrollTo=UiTzcNm5zUvd
 
 ###########################################################
 # raccomanda i film simili al film_target
