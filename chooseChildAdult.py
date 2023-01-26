@@ -1,7 +1,12 @@
 import streamlit as st
 #styling
 tabs_font_css = """
-                <style>                    
+                <style> 
+                    .btn{
+                        border-radius: 7px;
+                        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+                      
+                    }
                     h2 {
                       color: #0a0908;
                       }
