@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import DatasetInspection as di
 
+st.set_page_config(page_title="Movie recommendation")
 
 ############################# REDIRECT TO PAGE  ############################
 def nav_to(url):
