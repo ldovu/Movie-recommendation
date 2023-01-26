@@ -4,6 +4,8 @@ import MovieRecommendationSystem as mrs
 import numpy as np
 import DatasetInspection as di
 
+st.set_page_config(page_title="Movie recommendation")
+
 ############################# STYLING #############################
 tabs_font_css = """
                 <style>
