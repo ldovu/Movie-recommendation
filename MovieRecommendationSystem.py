@@ -5,11 +5,11 @@ from tqdm import tqdm
 from Levenshtein import distance
 
 dataset_movies = pd.read_csv('movies_dataset_overview.csv')
-# il dataset è quello ottenuto dopo il preprocessing
-# per maggiori informazioni: https://colab.research.google.com/drive/1chPt-SJ3CT5nDLnHFXfZ3LpymwuLsF5t#scrollTo=UiTzcNm5zUvd
+# the dataset is the one obtained after preprocessing
+# for more info: https://colab.research.google.com/drive/1chPt-SJ3CT5nDLnHFXfZ3LpymwuLsF5t#scrollTo=UiTzcNm5zUvd
 
 ###########################################################
-# raccomanda i film simili al film_target
+# recommends movies similar to film_target
 
 def recommendMovies(dataset, film_target, amount=1):
         distance = []
@@ -29,7 +29,7 @@ def recommendMovies(dataset, film_target, amount=1):
         return rec[columns][:amount]
 
 ###########################################################
-# filtri per la funzione MoodRecommendation()
+# filters for the MoodRecommendation() function
 
 def onlyMoodMovies(df,mood):
         if (mood == 'laugh'):
@@ -76,7 +76,7 @@ def onlyMoodMovies(df,mood):
         return df
 
 ###########################################################
-# raccomanda i film in base al mood
+# recommends movies based on mood
 
 def MoodRecommendation(dataset, mood, amount=1):
         rec = onlyMoodMovies(dataset,mood)
@@ -85,7 +85,7 @@ def MoodRecommendation(dataset, mood, amount=1):
         return rec[columns][:amount]
     
 ###########################################################    
-# filtra il dataset in base al mood   
+# mood filter  
 
 def selectMovies(df, mood):
         if (mood == 'laugh'):
@@ -111,7 +111,7 @@ def selectMovies(df, mood):
         return df
 
 ###########################################################
-# funzione per vedere se il film è presente nel dataset anche dopo i tagli
+# function to know if a movie is present or not after the cuts to the dataset
 
 def ispresent(lista, film):
         for x in lista:
