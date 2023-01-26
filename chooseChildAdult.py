@@ -1,5 +1,4 @@
 import streamlit as st
-
 #styling
 tabs_font_css = """
                 <style>
@@ -34,23 +33,24 @@ col1, col2, col3 = st.columns([1, 6 ,1])
 with col2:
     st.write(f'''
                              <h2> Let's start with your age </h2>
-                                <div class="normal-text">
-                                    <p> Are you an adult o a child?
-                                    </p> 
-                                </div>
-                             
-                             
+                                
                              
                             ''' , unsafe_allow_html=True)
 
-    st.radio("", ["adult", "child"], key="qwerty")
+    st.radio(f'''
+                 <div class="normal-text">
+                     <p> Are you an adult o a child?</p>
+                 </div>
+                             
+             '''
+             , ["adult", "child"], key="qwerty")
     
     if st.session_state.qwerty == "adult":
         chat_botton1 = st.write(f'''
                                      <div class="div">
                                          <center>
                                              <a href="https://ldovu-movie-recommendation-inputpageadult-45z3ld.streamlit.app/?qwerty=%s">
-                                                 <button> Move to the next question </button>
+                                                 <button> Move on </button>
                                              </a>
                                          </center>
                                      <div class="btn">
@@ -63,7 +63,7 @@ with col2:
                                      <div class="div">
                                          <center>
                                              <a href="https://ldovu-movie-recommendation-inputpagechild-2jx062.streamlit.app/?qwerty=%s">
-                                                 <button> Move to the next question </button>
+                                                 <button> Move on </button>
                                              </a>
                                          </center>
                                      <div class="btn">
@@ -73,6 +73,7 @@ with col2:
                 nav_to("https://ldovu-movie-recommendation-inputpagechild-2jx062.streamlit.app/")
                 
                
+
               
   
 
