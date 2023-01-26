@@ -32,7 +32,7 @@ def nav_to(url):
 col1, col2, col3 = st.columns([1, 15 ,1])
 with col2:
     st.write(f'''
-                 <h1> Movie recommendation system </h1><h2> Let's start with your age </h2>
+                 <h1> Movie recommendation App </h1><h2> Let's start with your age </h2>
              ''' , unsafe_allow_html=True)
 
     st.radio( "Are you an adult or a child?" , ["adult", "child"], key="qwerty")
