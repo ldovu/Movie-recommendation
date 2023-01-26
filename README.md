@@ -10,6 +10,9 @@
 
 INFORMATION SYSTEMS AND SOFTWARE DESIGN (224MI) - Final project
 
+Data Engineer and Software Engineer: Simone Cossaro
+Software Developer: Ludovica Caiola
+
 The aim of this project is to design a web application based on a machine learning system for movie recommendation.
 
 Four inputs are required from the user:
