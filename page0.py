@@ -1,26 +1,6 @@
 import streamlit as st
-import base64
 
 st.set_page_config(page_title="Movie recommendation", page_icon="💯")
-
-
-def get_base64(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
-
-#function to set the background
-def set_background(png_file):
-    bin_str = get_base64(png_file)
-    page_bg_img = '''
-                    <style>
-                        .stApp {
-                            background-image: url("data:image/png;base64,%s");
-                            background-size: cover;
-                        }
-                    </style>
-                  ''' % (bin_str)
-    st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
 #redirection to
@@ -30,7 +10,6 @@ def nav_to(url):
                  """ % (url)
     st.write(nav_script, unsafe_allow_html=True)
 
-#set_background('sfondo.png')
 
 #styling
 tabs_font_css = """
@@ -40,15 +19,16 @@ tabs_font_css = """
                         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
                       
                     }
-                    h1 {
-                      color: red;
-                    }
-                    
                     .normal-text{
                         font-size: 20px;
-                        color: black;
+                        color: #22333b;
                         font-family: Segoe UI;
-                    }
+                      }
+                    
+                    h1 {
+                      color: #0a0908;
+                      }
+                    
                     p span {
                         display: block;
                     }
@@ -76,7 +56,7 @@ chat_botton1 = st.write(f'''
                               <div class="div">
                                   <center>
                                       <a href="https://ldovu-movie-recommendation-choosechildadult-abxz7g.streamlit.app/">
-                                          <button> Move to the next question </button>
+                                          <button> Start! </button>
                                       </a>
                                   </center>
                               <div class="btn">
@@ -85,5 +65,3 @@ chat_botton1 = st.write(f'''
 
 if chat_botton1 :
     nav_to("https://ldovu-movie-recommendation-choosechildadult-abxz7g.streamlit.app/")
-
-
