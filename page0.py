@@ -30,7 +30,7 @@ def nav_to(url):
                  """ % (url)
     st.write(nav_script, unsafe_allow_html=True)
 
-#set_background('sfondo.png')
+set_background('sfondo.png')
 
 #styling
 tabs_font_css = """
@@ -40,13 +40,7 @@ tabs_font_css = """
                         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
                       
                     }
-                    .header{
-                        border: 1px ;
-                        position: fixed;
-                        color: red;
-                        font-family: Segoe UI;
-                        
-                    }
+                    
                     .normal-text{
                         font-size: 20px;
                         color: black;
