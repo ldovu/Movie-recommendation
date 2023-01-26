@@ -50,12 +50,12 @@ st.text_input('Which movie is similar to the one you want to watch? (*optional*)
 ############################ CHECK USER INPUT ############################
 def checkInputUser(title):
     if di.checkTitolo(title) or title=="":
-        st.write("You  would like to see a movie similar to ", title)
+        st.write("You  would like to see a movie similar to: ", title)
     else:
         
         mystring = ", ".join(di.forseCercavi(title))
           
-        st.write("You might looked for: ", mystring)
+        st.write("Incorrect title! You might looked for: ", mystring)
 
 
 checkInputUser(st.session_state.zxcvbn)
@@ -65,7 +65,6 @@ def checkInputUserBoolean(title):
     if di.checkTitolo(title) or title=="":
         return True
     else: 
-        #st.error("Incorrect title movie")
         return False 
 
 
