@@ -20,4 +20,4 @@ Four inputs are required from the user:
 
 Based on these inputs, the application quickly returns 10 recommended movie titles with their respective plots.
 
-If the film target is not entered, the system returns the 10 most popular movies based on mood.
+If the film target is not entered, the system returns the 10 most popular movies based on the mood.
