@@ -37,7 +37,7 @@ col1, col2, col3 = st.columns([1, 15 ,1])
 with col2:
     ############################  MOOD SELECTION  ############################
     st.write(f'''
-                     <h1> Movie recommendation app </h1><h2> MOOD </h2>
+                     <h1> Movie recommendation App </h1><h2> MOOD </h2>
                  ''' , unsafe_allow_html=True)
     df= pd.DataFrame(["laugh","cry", "adrenaline", "adventure","love", "fear", "fantasy", "science fiction", "casual"])
     st.radio('Which emotion would you like to try?', df, key="asdfgh")
