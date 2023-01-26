@@ -15,10 +15,10 @@ tabs_font_css = """
                     }
                     
                     h2 {
-                      color: #0a0908;
+                      color: #002642;
                     }
                     h1 {
-                      color: #002642;
+                      color: #0a0908;
                       }
                     
                     
