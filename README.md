@@ -11,3 +11,13 @@
 INFORMATION SYSTEMS AND SOFTWARE DESIGN (224MI) - Final project
 
 The aim of this project is to design a web application based on a machine learning system for movie recommendation.
+
+Four inputs are required from the user:
+- children or adult?
+- emotion to feel (belonging to a list)
+- film target(optional)
+- maximum time
+
+Based on these inputs, the application quickly returns 10 recommended movie titles with their respective plots.
+
+If the film target is not entered, the system returns the 10 most popular movies based on mood.
