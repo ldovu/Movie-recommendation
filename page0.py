@@ -44,7 +44,7 @@ with col2:
     st.write(f'''
                                  <h1> Movie recommendation App </h1>
                                     <div class="normal-text">
-                                        <p><span>Hi! </span> <span>This is a movie recommendation system. It will take few time to answer these questions.</span><span>Take your time and enjoy:)</span>
+                                        <p><span>Hi! </span> <span>This is a movie recommendation app. The system will predict 10 movies, based on the answers to the following questions.</span><span>Take your time and enjoy:)</span>
                                         </p> 
                                     </div>
 
