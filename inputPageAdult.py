@@ -136,4 +136,3 @@ with col2:
 
     goToPage(st.session_state.asdfgh, st.session_state.zxcvbn , st.session_state.minutes )
 
-
